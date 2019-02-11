@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vier op een R</title>  
+    <link rel="stylesheet" type="text/css" href="css/voer.css">
+    </head>
+    <body>
+        <h2 id="turns">Waiting for turn...</h1>
+        <h1 id="win"></h1>
+        <div id="voer">
+            <div id="c0" class="col" onclick="move(this)">
+                <div id="05" class="field"></div>
+                <div id="04" class="field"></div>
+                <div id="03" class="field"></div>
+                <div id="02" class="field"></div>
+                <div id="01" class="field"></div>
+                <div id="00" class="field"></div>
+            </div>
+            <div id="c1" class="col" onclick="move(this)">
+                <div id="15" class="field"></div>
+                <div id="14" class="field"></div>
+                <div id="13" class="field"></div>
+                <div id="12" class="field"></div>
+                <div id="11" class="field"></div>
+                <div id="10" class="field"></div>
+            </div>
+            <div id="c2" class="col" onclick="move(this)">
+                <div id="25" class="field"></div>
+                <div id="24" class="field"></div>
+                <div id="23" class="field"></div>
+                <div id="22" class="field"></div>
+                <div id="21" class="field"></div>
+                <div id="20" class="field"></div>
+            </div>
+            <div id="c3" class="col" onclick="move(this)">
+                <div id="35" class="field"></div>
+                <div id="34" class="field"></div>
+                <div id="33" class="field"></div>
+                <div id="32" class="field"></div>
+                <div id="31" class="field"></div>
+                <div id="30" class="field"></div>
+            </div>
+            <div id="c4" class="col" onclick="move(this)">
+                <div id="45" class="field"></div>
+                <div id="44" class="field"></div>
+                <div id="43" class="field"></div>
+                <div id="42" class="field"></div>
+                <div id="41" class="field"></div>
+                <div id="40" class="field"></div>
+            </div>
+            <div id="c5" class="col" onclick="move(this)">
+                <div id="55" class="field"></div>
+                <div id="54" class="field"></div>
+                <div id="53" class="field"></div>
+                <div id="52" class="field"></div>
+                <div id="51" class="field"></div>
+                <div id="50" class="field"></div>
+            </div>
+            <div id="c6" class="col" onclick="move(this)">
+                <div id="65" class="field"></div>
+                <div id="64" class="field"></div>
+                <div id="63" class="field"></div>
+                <div id="62" class="field"></div>
+                <div id="61" class="field"></div>
+                <div id="60" class="field"></div>
+            </div>
+        </div>
+
+
+   
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="js/frontend_voer.js"></script>
+</body>
+</html>

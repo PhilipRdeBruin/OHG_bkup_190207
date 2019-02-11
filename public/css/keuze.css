@@ -1,0 +1,186 @@
+#compilatie{
+    opacity: 0.4;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: black;
+}
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.pointer{
+cursor:pointer;   
+-webkit-touch-callout: none; 
+-webkit-user-select: none; 
+-khtml-user-select: none; 
+-moz-user-select: none; 
+-ms-user-select: none; 
+user-select: none; 
+}
+#invite{
+    display:none;
+}
+#status{
+    margin-left:auto;
+    margin-right:auto;
+}
+.queuestatus {
+    width:40px;
+    height:40px;
+    background-color:grey;
+    margin:10px;
+    float:left
+}
+.accepted {
+    background-color:green;
+}
+.declined {
+    background-color:red;
+}
+h3{
+    margin-top:0;
+    padding-top:0;
+}
+#modalbg {
+position: absolute;
+z-index:100;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-color:rgba(0,0,0,0.5);
+display:none;
+}
+.selected {
+    color:blue;
+}
+#modal {
+width:350px;
+height:230px;
+position: relative;
+margin-left:auto;
+margin-right:auto;
+margin-top:calc(50vh - 100px);
+background-color:white;
+box-sizing:border-box;
+padding:20px;
+-webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+}
+#invitebuttons {
+display:none;
+margin-left:10px;
+margin-top:20px;
+}
+#confirmbuttons {
+display:none;
+margin-left:10px;
+margin-top:20px;
+}
+#closebuttons {
+display:none;
+margin-left:10px;
+margin-top:20px;
+}
+#hiddenform{
+display:none;
+}
+.unavailable {
+    color:red;
+    cursor:default;
+}
+#games{
+    width:calc((100%/3)*2);
+    height:100vh;
+    float:left;
+    background-color: lightgray
+}
+
+.game {
+    width:calc(100vw/3*2/4 - 25px);
+    height:calc(100vw/3*2/4 - 25px);
+    float:left;
+    margin:10px 0 10px 20px;
+    background-color:grey;
+    box-sizing: border-box;
+    padding:15px;
+    color:white;
+    font-weight: 700;
+    cursor:pointer;
+}
+h1 {
+    margin-left:20px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #4e4e4e; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(212, 212, 212); 
+  }
+#chat{
+    width:calc(100%/3);
+    height:100vh;
+    float:left;
+    background-color:grey;
+    line-height: 2em;
+}
+#chattext{
+    position:relative;
+    margin-top:40px;
+    margin-left:10%;
+    margin-right:10%;
+    color:white;
+    height:calc(100vh - 130px);
+    overflow-y:auto;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    padding-right:10px;
+}
+#chatinput {
+    margin-left:10%;
+    height:50px;
+    margin-top:10px;
+    background-color:lightgray;
+    border:none;
+    color:black;
+    font-weight: 700;
+    font-size: 18px;
+    padding:10px;
+    box-sizing: border-box;
+    width:80%;
+}
+#scrolldown {
+    position:relative;
+    z-index:10px;
+    width:calc(80% - 5px);
+    margin-left:10%;
+    height:40px;
+    box-sizing: border-box;
+    padding-top:2px;
+    margin-top:-40px;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    font-weight: 700;
+    text-align: center;
+    cursor:pointer;
+    display:none;
+}
