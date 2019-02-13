@@ -10,34 +10,30 @@
 @extends('layouts.standaard')
 @section('content')
 
-<div class="container">
-    <div class="row justify-content-center mt-4">
-        <div class="container col-md-4" style="text-align:center">
-            <h1><span class="kl_blauw">Welkom op uw profielpagina!</span></h1><br>
-        </div>
+<div class="main">
+    <div class="row justify-content-center">
+    <div class="col-md-8">
+            <h1>Welkom op uw profielpagina!</h1><br>
+    
+                <h4>Hier onder vindt u een overzicht van uw persoonlijke gegevens. Daarnaast een lijst van uw kennissen.</h4>
+</div>
     </div>
-
-<!--persoonlijke gegevens updaten-->
-        <div class="row justify-content-center">
-            <div class="container col-md-8" style="text-align:center">
-                <h4>Hier onder vindt u een overzicht van uw persoonlijke gegevens. Daarnaast een lijst van uw kennissen waarmee u spellen kunt spelen.</h4>
-            </div>
-        </div>
     <br>
 
     <div class="row justify-content-center" id = "profielweergave">
-        <div class="col-md-5">
+        <div class="col-md-6">
 
-            <div class="card">
-
-                <div class="card" style="width: 29rem;">
-
-                <div class="card-header" style="text-align:center"><b>Profiel</b></div>
-                
-                    <div class="card-body">
-                
-            
-                        <h6 style="text-align:center"> Dit zijn uw gegevens, indien u wilt kunt u ze aanvullen</h6> 
+          <div class="profielBlok">
+            <div class="profielHeader">
+               <h2 style="margin-top:2vmin">Uw profiel</h2>
+              </div>
+        <div class="profielButton">
+            <h1 style="margin-top:-2vmin;padding-top:0">&#8634;</h1>
+        </div>
+              <div class="col-md-8">
+<!--                        <h4>U kunt uw gegevens aanvullen of wijzigen</h4> -->
+                 
+                        
                             <form method="POST" action="{{ route('profiel.update') }}">
                             @csrf
                             @method('PUT')
@@ -192,7 +188,7 @@
                       
                                                
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-5 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('updaten van uw gegevens') }}
                                 </button>
@@ -200,25 +196,29 @@
                             </div>
                             </form>
                 </div>
+            <div class="col-md-4">
+
+            <div id="profielFoto">{{ __('foto') }}
+                <input id="foto" type="file"
+                    class="form-control{{ $errors->has('foto') ? ' is-invalid' : '' }}"
+                    name="foto" value="{{ $user->efoto }}" > 
                 </div>
+              </div>
             </div>
         </div>
-
-<!-- button vriend toevoegen-->
-        <div class="col-md-4">
-            <button type="button" class="knop-mpl knop-inlog" onclick="document.location='/vriendtoevoegen'">Vriend toevoegen<br/><span class="px-14"></span></button>
-        </div>
-    
+        
+     
 <!--lijst metvrienden-->            
-            <div class="col-md-3">
-                <div class="card mt-4">
-
-                    <div class="card-header" style="text-align:center"><b>Vrienden</b>
-                        
-                    </div>
-                    
-                    <div class="card-body">
-                        <div class="row justify-content-center">
+            <div class="col-md-6">
+         <div class="vriendBlok">
+        <div class="vriendHeader">
+            <h2 style="margin-top:2vmin">Kennis</h2>
+             </div>
+            
+         <div class="vriendButton" onclick="document.location='/vriendtoevoegen'">
+            <h1 style="margin-top:-2vmin;padding-top:0">+</h1>
+                  
+        
                    <select>
                         @foreach($user->vrienden as $vriend)
 
@@ -233,49 +233,26 @@
                         ?>
                        
                        <option value="{{$vriend->id}}">{{$vrienden}}</option>
-                        @endforeach 
                        
-         
-                             @foreach($user->vriendenReverse as $gebruiker)
+                    
                        
-                    <?php 
-                        $vn=$gebruiker->voornaam;
-                        $tv=($gebruiker->tussenv != NULL) ? " " . $gebruiker->tussenv : "" ;
-                        $an=$gebruiker->achternaam;
-                        $vrienden=$vn.$tv. " " . $an;
-           
-                            ?>
-                                
-                        <option value="{{$gebruiker->id}}">{{$vrienden}}</option>
                         @endforeach 
                             </select>
                          </div>   
-                            
-                    <div class="row justify-content-center mt-3">
-                        <a href="#" class="btn btn-primary">Spelen</a>
+                        
+                    
+                        
                     </div>
         
                     
-                    </div> 
+                
                 
                       
-                  
-                </div>
-                <div class="card-body"> 
-                    <p id = "SpelFoto" > </p>               
+           
+                
+            
                     
-                            <script>                                  
-                               
-                                    function showFoto(y) {
-                                        var x = document.createElement("IMG");
-                                        x.setAttribute("src", `afbeeldingen/spellen/spel${y}.png` );
-                                        x.setAttribute("width", "20");
-                                        x.setAttribute("height", "20");
-                                        x.setAttribute("alt", "Foto van uw favouriete spel");
-                                        document.getElementById("SpelFoto").innerHTML = x;
-                                    }
-                                
-                            </script>
+                
 
                                             
                     </div>

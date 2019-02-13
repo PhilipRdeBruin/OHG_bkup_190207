@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $fillable = [
         'gebr_naam', 'email', 'password',
         'voornaam', 'initialen', 'tussenv', 'achternaam',
-        'straatnaam', 'huisnummer', 'postcode', 'woonplaats',
+        'straatnaam', 'huisnr', 'postcode', 'woonplaats',
         'telefoon', 'mobiel', 'loged_in_at', 'loged_out_at',
     ];
 

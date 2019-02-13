@@ -21,5 +21,6 @@
 
 <link rel = "stylesheet" href = "{{ asset('css/ohg.css') }}"/>
 <link rel="stylesheet"  href="{{ asset('css/KVU.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/style.css')}}"/>
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/functions/php_functies.php'); ?>

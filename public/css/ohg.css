@@ -229,7 +229,7 @@ margin-left:50px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-/* Games 
+ Games 
 #games{
   
 }
@@ -261,7 +261,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 	background-color:rgba(0,0,0,0.6);
 	overflow:hidden;
 }
-/* .chess{
+ .chess{
     background-image:url('../afbeeldingen/game.jpg')
 } 
 
@@ -357,7 +357,7 @@ h5{
     float:right;
 }
 
-/* Private
+ Private
 #private{
     max-width:calc(1200px - 2%);
     width:98%;
@@ -426,7 +426,7 @@ h5{
     display:none;
 }
 
-/* SPEL PAGINA
+ SPEL PAGINA
 
 #spel {
     width:100%;
@@ -567,7 +567,7 @@ h6{
     text-align: center;
 }
 
-/*index 
+index 
 #index {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2NkYGBoYIAAMM2ITQCqAKECRQAAdW4DBf3zkJMAAAAASUVORK5CYII=) repeat, linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 35%, rgba(255,255,255,0) 100%);
     position:fixed;
@@ -895,7 +895,7 @@ display:none;
 }
 
 
-/* PROFIEL 
+ PROFIEL 
 
  hr.new1{
      border: 0.8px dotted grey;
@@ -1182,4 +1182,4 @@ display:none;
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
-*/
+

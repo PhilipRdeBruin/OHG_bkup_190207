@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Auth;
 
-class Vriendtoevoegen extends Mailable
+class VriendToevoegen extends Mailable
 {
     use Queueable, SerializesModels;
     protected $gebruiker_id;
