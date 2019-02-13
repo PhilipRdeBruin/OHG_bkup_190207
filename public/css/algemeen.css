@@ -33,6 +33,10 @@
     color           : #f42;
 }
 
+.kl_wit {
+    color           : white;
+}
+
 .px-10 {
     font-size       : 10px;
 }
@@ -63,4 +67,8 @@
 
 .rechts {
     text-align: right;
+}
+
+.vet {
+    font-weight     : bold; 
 }

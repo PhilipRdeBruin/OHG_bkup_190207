@@ -206,9 +206,9 @@ h3{
 #logo{
     float:left;
     margin-left:2vw;
-    background-image: url(../afbeeldingen/logo.png);
+    background-image: url(../afbeeldingen/logo_wide.png);
     background-size:contain;
-    width:200px;
+    width:500px;
     height:calc(5vh + 20px);
     margin-top:2vh;
     background-repeat: no-repeat;

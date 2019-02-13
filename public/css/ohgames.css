@@ -271,6 +271,10 @@
     text-wrap       : normal;  
 }
 
+.li_navbar {
+    margin          : 0 10px;
+}
+
 #overzichtstabel {
     max-height      : 200px;
     overflow        : auto;
@@ -282,8 +286,9 @@
 }
 
 #titel {
-    margin-left     : 250px;
-    color           : white;
+    /* float           : left; */
+    margin          : auto auto 5px -50px;
+    color           : black;
 }
 
 #upload_submit {
@@ -295,7 +300,6 @@
     border-radius   : 7px;
     cursor          : pointer;
 }
-
 
 #actievespellen {
     margin-top      : 50px;

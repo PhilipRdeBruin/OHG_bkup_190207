@@ -2,7 +2,6 @@
 <nav class="navbar navbar-light navbar-expand-lg navbar-mpl navbar_header">
     <div id="logo" style="cursor:pointer" onclick="location.href = '/'">
     </div>
-    <!-- <a class="navbar-brand" id="titel"><b><i><span class="kl_wit vet">O</span>ud Hollands Gamen</i></b></a> -->
 
     @if(empty($active_navlink))
         <?php $active_navlink = ""; //TODO: refactor active links ?>
@@ -10,30 +9,31 @@
     <?php $act_lnk = init_ActiveLinks($active_navlink) ?>
     
     <div class="mr-auto"> </div>
-        <!-- <a class="navbar-brand mx-auto" id="titel"><b><i><span class="kl_wit vet">O</span>ud Hollands Gamen</i></b></a> -->
-        <div class="ml-auto">
-            <div class="collapse navbar-collapse " id="navbarCollapse">
-                <ul class="navbar-nav">
+        <a class="navbar-brand mx-auto" id="titel"><b><i>Oud Hollands Gamen</i></b></a>
+            <div class="ml-auto">
+                <div class="collapse navbar-collapse " id="navbarCollapse">
 
-                    @guest
-                    @else
-                        <li class="navbar-item li_navbar">
-                            <a href="/keuze" class="nav-link {{ $act_lnk['login'] }}" style="color:white">Startpagina</a>
-                        </li>
-                    @endguest
-                    
-                    <li class=" nvabar-item li_navbar">
-                        <a href="/contact" class="nav-link {{ $act_lnk['login'] }}" style="color:white">Contact</a>
-                    </li>
 
-                    @guest
-                    @else
-                        <li class=" nvabar-item li_navbar">
-                            <a href="/profiel" class="nav-link {{ $act_lnk['login'] }}"style="color:white">Mijn Profiel</a>
-                        </li>
-                    @endguest
+                    <ul class="navbar-nav">
 
-                    <li class=" nvabar-item li_navbar btn-group">
+                        @if($active_navlink == "notnav")
+                            <!-- <span class="kl_blauw">xxxxxxxxxxxx</span> -->
+                        @else
+                            <li class="navbar-item">
+                                <a href="/keuze" class="nav-link {{ $act_lnk['login'] }}" 
+                                    style="color:white">Startpagina</a>
+                            </li>
+                        @endif
+
+                        @if($active_navlink == "notnav")
+                            <!-- <span class="kl_blauw">xxxxxxxxxxxx</span> -->
+                        @else
+                            <li class="navbar-item">
+                                <a href="/profiel" class="nav-link {{ $act_lnk['login'] }}"style="color:white">Mijn Profiel</a>
+                            </li>
+                        @endif
+
+                        <li class="navbar-item btn-group">
                         @guest
                             <a href="#" class="nav-link dropdown-toggle {{ $act_lnk['login'] }}" data-toggle="dropdown" style="color:white">Inloggen</a>
                             <div class="dropdown-menu">
@@ -59,16 +59,16 @@
                                 </div>
                             </div>
                         @endguest
-                    </li>
+                        </li>
+                        <li>
+                            <span class="kl_grijscol_grijs" style="margin-right:50px"></span>
+                        </li>				
+                    </ul>
 
-                    <li>
-                        <span class="kl_grijscol_grijs" style="margin-right:50px"></span>
-                    </li>				
-                </ul>
-            </div>
+
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </nav>
