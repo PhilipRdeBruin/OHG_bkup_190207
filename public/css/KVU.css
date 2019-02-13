@@ -1,0 +1,268 @@
+/*
+html, body {
+    padding:0;
+    margin:0;
+    background-color:#e8e8e8;
+}
+
+header{
+    width:100%;
+    height:120px;
+    background-color:#108ea7;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+}
+
+#head {
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    height:120px;
+    background-color: #108ea7;
+}
+
+#logo{
+    float:left;
+    background-image: url(afbeeldingen/logo.png);
+    background-size:contain;
+    width:200px;
+    height:10vh;
+    margin-top:2vh;
+    background-repeat: no-repeat;
+}
+
+nav{
+    float:right;
+    height:4vh;
+    margin-top:6vh;
+}
+
+nav a{
+    font-size:18px;
+    text-decoration: none;
+    color:white;
+    margin-left:50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#main{
+    width:100%;
+    height:calc(100vh - 14vh)
+}
+
+.KenUit{
+    width:100%;
+    height:calc(9vh + 20px);
+    top:0;
+    font-family: 'Lato', sans-serif , color: black;
+    padding:0;
+    margin: 2vw 0 0 2vw;
+    font-size:8vmin;
+    text-align: center;
+}
+
+#choice{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+#friends, #game{
+    float:left;
+    width:calc(50% - 3vw);
+    height:calc(100% - 4vw);
+    background-color: rgba(0,0,0,0.15);
+    margin: 2vw 0 2vw 3vw;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    cursor:pointer;
+}
+
+#friends:hover, #game:hover{
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+}
+
+#friends{
+   
+    background-size:cover;
+    background-position: center center;
+}
+
+#game{
+   
+    background-size:cover;
+    background-position: center center;
+}
+
+#form_speleruitnodigen{
+    margin-right:15vmin;
+    margin-left:5vmin;
+    margin-top:15vmin;
+    margin-bottom:15vmin;
+}
+
+
+
+.title {
+    width:100%;
+    height:30%;
+    background-color:rgba(0,0,0,0.75);
+}
+
+.spacer {
+    width:100%;
+    height:70%;
+}
+
+.left{
+    float:left;
+    text-align:left;
+}
+
+.right{
+    float:left;
+    text-align:left;
+}
+
+
+
+.clear{
+    clear:both;
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:black;
+    font-size:6vmin;
+    margin-top:4vmin;
+}
+
+h3{
+    position:absolute;
+    top:0;
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:white;
+    font-size:8vmin;
+    margin-top:3.5vmin;
+    width:100%;
+    text-align: center;
+    transform:rotate(-20deg)
+}
+
+.KVUleft{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:black;
+    font-size:3vmin;
+    margin-top:4vmin;
+    margin-left:4vmin;
+    margin-bottom:2vmin;
+}
+
+.fromP{
+    margin-left:0;
+    background-color: rgba(0,0,0,0.15);   
+}
+
+.profielLabelKVU{
+    width: 200px;
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:black;
+    font-size:3vmin;
+    /* margin-top:2vmin; 
+    margin-left:2vmin;
+    margin-bottom:2vmin;
+}
+
+.invoerLabelKVU{
+    width: 200px;
+    /* margin-top:2vmin; 
+    margin-left:2vmin;
+    margin-bottom:2vmin;
+}
+
+#speluitnodigenknop{
+    margin-top:6vmin;
+}
+
+.vraagtekenTekst{
+    float:left;    
+    font-family: 'Lato', sans-serif;
+    color:black;
+    font-size:3vmin;
+    margin-left:5vmin;
+    margin-top:5vmin;
+    
+}
+
+.button{
+    float:left;
+    margin-left:2vmin;
+    width:15vmin;
+    height:15vmin;
+    border-radius:7vmin;
+    background-color:#328A2D;
+    text-align:center;
+    margin-top:2vmin;
+    margin-bottom:2vmin;
+    
+}
+
+.button p{
+    margin-top:2vmin;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    color:black;
+    font-size:8vmin;
+    text-align:center;
+}
+
+.vriendOnline{
+    float:left;
+    /* width:100px; 
+    height:250px;
+    background-color: #108ea7;
+    width:calc(30% - 3vw);
+    /* height:calc(60% - 4vw); 
+    margin: 2vw 0 2vw 2vw;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+.fotoVriend{
+    float:left;
+    width:100%;
+    height:190px;
+    cursor:pointer;
+    background-color:#108ea7;
+}
+
+.naamVriend{
+    float:left;
+    width:100%;
+    height:25px;
+    cursor:pointer;
+    background-color:#108ea7;
+}
+
+.naarChat{
+    float:left;
+    width:100%;
+    height:35px;
+    background-color: #108ea7;
+    cursor:pointer;
+}
+*/

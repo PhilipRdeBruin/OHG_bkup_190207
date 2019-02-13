@@ -39,7 +39,7 @@
                     <div id=actspelcard>
                         <p id=actspel_ihdr>{{ $actiefspel->spelletje->spel_naam }}</p>
                         <p id=actspel_info>tijdstip: {{ $actiefspel->aanvangstijdstip }}</p>
-                           <form id="actspel" method="POST" action="http://192.168.2.84/{{ $actiefspel->spelletje->link }}">
+                           <form id="actspel" method="POST" action="http://192.168.2.6/{{ $actiefspel->spelletje->link }}">
                         <input type="hidden" name="act_spel" value="{{ $actiefspel->id }}">
                         <input type="hidden" name="speler" value="{{ $gebruiker->id }}">
 			<input type="hidden" name="rol" value="{{ $actiefspel->pivot->rol }}">

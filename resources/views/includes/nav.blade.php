@@ -1,10 +1,13 @@
- <nav class="navbar navbar-light navbar-expand-lg navbar-mpl">
+
+<nav class="navbar navbar-light navbar-expand-lg navbar-mpl navbar_header">
+<div id="logo" style="cursor:pointer" onclick="location.href = '/'">
+</div>
 @if(empty($active_navlink))
      <?php $active_navlink = ""; //TODO: refactor active links ?>
 @endif
 <?php $act_lnk = init_ActiveLinks($active_navlink) ?>
     <div class="mr-auto"> </div>
-     <a class="navbar-brand mx-auto" id="titel"><b><i>Oud Hollandse Spelletjes</i></b></a>
+     <a class="navbar-brand mx-auto" id="titel"><b><i>Oud Hollands Gamen</i></b></a>
 
 
 

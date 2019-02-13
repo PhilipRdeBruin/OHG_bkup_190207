@@ -1,0 +1,1185 @@
+/*
+html, body {
+    padding:0;
+    margin:0;
+    background-color:#c5c5c5;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track
+  ::-webkit-scrollbar-track {
+    background: #4e4e4e; 
+  }
+   
+  /* Handle
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(212, 212, 212); 
+  }
+*/
+.navbar_header{
+    width:100%;
+    height:calc(9vh + 20px);
+    background-color:#108ea7;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    z-index:10;
+}
+/*
+#main{
+    width:100%;
+    height:calc(100vh - (9vh + 20px));
+    transition: height 0.4s ease-out;
+}
+#choice{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+#friends, #game{
+    float:left;
+    width:calc(50% - 3vw);
+    height:calc(100% - 4vw);
+    margin: 2vw 0 0 2vw;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+#friends:hover, #game:hover{
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+
+}
+#friends{
+    background-image:url(../afbeeldingen/vrienden.jpg);
+    background-size:cover;
+    background-position: center center;
+}
+#game{
+    background-image:url(../afbeeldingen/game.jpg);
+    background-size:cover;
+    background-position: center center;
+}
+#notifications {
+    max-width:1200px;
+    width:100%;
+    height:0;
+    margin-left:auto;
+    margin-right:auto;
+    transition: height 0.4s ease-out
+}
+.notification {
+    margin-top:-1vw;
+    margin-left:2vw;
+    width:200px;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    opacity:0;
+    float:left;
+    transition: opacity 0.4s ease-out;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    overflow:hidden;
+}
+.notification p {
+    float:left;
+    font-size:13.1px;
+    padding:0;
+    margin:0;
+    padding:5px 0 0 10px;
+    line-height:2.5vmin;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.spelen{
+    float:right;
+    width:40px;
+    height:100%;
+    background-color: rgba(255,255,255,0.8);
+    cursor:pointer;
+}
+.spelen p{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    margin-top:3vmin;
+    color:black;
+    font-size:16px;
+    text-align: center;
+    transform:rotate(-90deg)
+}
+.title {
+    width:100%;
+    height:30%;
+    background-color:rgba(0,0,0,0.75);
+}
+.spacer {
+    width:100%;
+    height:70%;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:white;
+    font-size:6vmin;
+    margin-top:4vmin;
+}
+.left{
+    float:left;
+    text-align:left;
+}
+.right{
+    float:right;
+    text-align:right;
+}
+#arrowright{
+    border-top: 6vmin solid transparent;
+    border-bottom: 6vmin solid transparent;
+    border-left: 6vmin solid white;
+    float:right;
+    margin-right:15vmin;
+    margin-left:5vmin;
+    margin-top:5.8vmin;
+}
+#arrowleft{
+    border-top: 6vmin solid transparent;
+    border-bottom: 6vmin solid transparent;
+    border-right: 6vmin solid white;
+    float:left;
+    margin-top:5.8vmin;
+    margin-left:15vmin;
+    margin-right:5vmin;
+}
+.clear{
+    clear:both;
+}
+#of {
+    position:relative;
+    z-index:10;
+    width:16vmin;
+    height:16vmin;
+    border-radius:20vmin;
+    background-color:#108ea7;
+    margin-left:calc(50% - 8vmin);
+    margin-top:calc((20vmin)* -1);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+h3{
+    position:absolute;
+    top:0;
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:white;
+    font-size:8vmin;
+    margin-top:3.5vmin;
+    width:100%;
+    text-align: center;
+    transform:rotate(-20deg);
+    transition: transform 0.4s ease-out
+}
+
+#head {
+    width:100%;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    height:120px;
+}
+*/
+#logo{
+    float:left;
+    margin-left:2vw;
+    background-image: url(../afbeeldingen/logo.png);
+    background-size:contain;
+    width:200px;
+    height:calc(5vh + 20px);
+    margin-top:2vh;
+    background-repeat: no-repeat;
+}
+/*
+nav{
+    float:right;
+    height:4vh;
+    margin-top:5vh;
+    margin-right:2vw;
+}
+nav a, nav a:hover{
+font-size:18px;
+text-decoration: none;
+font-weight:600;
+color:white;
+margin-left:50px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* Games 
+#games{
+  
+}
+.games {
+    max-width:calc(1200px - 2%);
+    width:98%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1%;
+    padding-top:0;
+}
+.game {
+	position:relative;
+    float:left;
+    margin-left:1%;
+    margin-right:1%;
+    margin-top:2vw;
+    cursor:pointer;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    background-size:cover;
+    background-position: center;
+}
+.titleBlok {
+	position:absolute;
+	bottom:0;
+	z-index:10;
+	background-color:rgba(0,0,0,0.6);
+	overflow:hidden;
+}
+/* .chess{
+    background-image:url('../afbeeldingen/game.jpg')
+} 
+
+.spel1 {
+    background-image:url('/afbeeldingen/spellen/spel1.png')
+}
+
+.spel2 {
+    background-image:url('/afbeeldingen/spellen/spel2.png')
+}
+
+.spel3 {
+ 
+   background-image:url('/afbeeldingen/spellen/spel3.png')
+}
+
+.spel4 {
+    background-image:url('/afbeeldingen/spellen/spel4.png')
+}
+
+.spel5 {
+    background-image:url('/afbeeldingen/spellen/spel5.png')
+}
+
+.spel6 {
+    background-image:url('/afbeeldingen/spellen/spel6.png')
+}
+
+.spel7 {
+    background-image:url('/afbeeldingen/spellen/spel7.png')
+}
+
+.spel8 {
+    background-image:url('/afbeeldingen/spellen/spel8.png')
+}
+
+.spel9 {
+    background-image:url('/afbeeldingen/spellen/spel9.png')
+}
+
+.spel10 {
+    background-image:url('/afbeeldingen/spellen/spel10.png')
+}
+
+.spel11 {
+    background-image:url('/afbeeldingen/spellen/spel11.png')
+}
+
+.spel12 {
+    background-image:url('/afbeeldingen/spellen/spel12.png')
+}
+
+.spel13 {
+    background-image:url('/afbeeldingen/spellen/spel13.png')
+}
+
+.spel14 {
+    background-image:url('/afbeeldingen/spellen/spel14.png')
+}
+
+.spel15 {
+    background-image:url('/afbeeldingen/spellen/spel15.png')
+}
+
+.spel16 {
+    background-image:url('/afbeeldingen/spellen/spel16.png')
+}
+
+h4{
+    color:#FFF;
+	font-size:18px;
+	font-family: 'Lato', sans-serif;
+    margin:0;
+    padding:20px;
+    float:left;
+}
+.bullet {
+    background-color:rgb(214, 28, 28);
+    width:20px;
+    height:20px;
+    border-radius:18px;
+    margin: 23px 0 0 0;
+    padding:0px;
+    float:right;  
+}
+h5{
+    color:rgb(214, 28, 28);
+	font-size:18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:20px;
+    padding-left:10px;
+    float:right;
+}
+
+/* Private
+#private{
+    max-width:calc(1200px - 2%);
+    width:98%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1% 0 0 1%;
+    padding-top:0;
+}
+.private{
+    width:72%;
+    padding:0;
+    float:left;
+}
+#chat {
+    position:fixed;
+    top:calc(9vh + 20px);
+    right:2vw;
+    width: 28%;
+    height:calc(100vh - (9vh + 20px + 4vw));
+    padding:0;
+    margin:2vw 0 0 0;
+    background-color:rgba(0,0,0,0.5);
+}
+
+
+#chattext{
+    position:relative;
+    margin-top:40px;
+    margin-left:10%;
+    margin-right:10%;
+    color:white;
+    height:calc((100vh - (9vh + 20px + 4vw)) - 130px);
+    overflow-y:auto;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    padding-right:10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#chatinput {
+    margin-left:10%;
+    height:50px;
+    margin-top:10px;
+    background-color:lightgray;
+    border:none;
+    color:black;
+    font-weight: 700;
+    font-size: 18px;
+    padding:10px;
+    box-sizing: border-box;
+    width:80%;
+}
+#scrolldown {
+    position:relative;
+    z-index:10px;
+    width:calc(80% - 5px);
+    margin-left:10%;
+    height:40px;
+    box-sizing: border-box;
+    padding-top:2px;
+    margin-top:-40px;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    font-weight: 700;
+    text-align: center;
+    cursor:pointer;
+    display:none;
+}
+
+/* SPEL PAGINA
+
+#spel {
+    width:100%;
+    max-width:1200px;
+    margin: 0 auto 0 auto;
+}
+#spelinfo, #spelers {
+    height:200px;
+    float:left;
+    margin-left:2vw;
+    margin-top:2vw;
+    height:calc(100vh - (9vh + 20px) - 4vw);
+}
+
+#spelers{
+    width:calc(45% - 3vw);
+}
+#spelinfo{
+    width:calc(55% - 3vw);
+    background-color:rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+}
+
+#spelimg , #vs{
+    position:relative;
+    height:40%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-size:cover;
+    background-position: center bottom;
+    overflow:hidden;
+}
+#vs{
+    background-image: url('../afbeeldingen/vs.jpg');
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    background-position: center center;
+}
+.spelimg11 {
+    background-image: url('../afbeeldingen/schaken.jpg')
+}
+
+#spelinfo p {
+    margin-top:5%;
+    height:50%;
+    width:85%;
+    padding-right:20px;
+    color:white;
+    overflow-y:auto;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h6{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    font-size:7vmin;
+    color:white;
+    position:absolute;
+    width:calc(85% + 20px);
+    padding-left:calc((15% - 20px) /2);
+    padding-bottom:1vmin;
+    bottom:0;
+}
+.onlinespacer{
+    height:3%;
+    width:100%;
+}
+.speler{
+    width: 98%;
+    height: 36px;
+    background-color:rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+}
+.selected {
+    background-color:rgba(0,0,0,0.1);
+ 
+}
+.selected p {
+    color:darkblue;
+}
+.spelerstatus{
+    width:16px;
+    height:16px;
+    border-radius:18px;
+    margin: 10px 0 0 20px;
+    padding:0px;
+    float:left; 
+}
+.available{
+    background-color:rgb(35, 201, 35);
+}
+.unavailable{
+    background-color:rgb(221, 43, 43);
+}
+.speler p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float:left;
+    margin:0;
+    font-size:18px;
+    padding:0;
+    color:white;
+    font-weight: 600;
+    padding: 5px;
+    margin-left:20px;
+
+}
+#online{
+    height:58%;
+    width:100%;
+    overflow-y:auto;
+}
+
+.invite{
+ height:100%;
+ width:30%;
+ background-color: rgba(0,0,0,0.7);
+ float:right;
+}
+.invite p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float:left;
+    margin:0;
+    font-size:17px;
+    padding:0;
+    color:white;
+    font-weight: 700;
+    padding: 6px 0 7px 0;
+    width:100%;
+    text-align: center;
+}
+
+/*index 
+#index {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2NkYGBoYIAAMM2ITQCqAKECRQAAdW4DBf3zkJMAAAAASUVORK5CYII=) repeat, linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 35%, rgba(255,255,255,0) 100%);
+    position:fixed;
+    background-position: center top;
+    overflow-x:hidden;
+    z-index:2;
+    height:100vh;
+    width:100%;
+}
+.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+    overflow:hidden;
+    z-index:1;
+    transition:height 0.0s ease-out
+}
+
+.myVideo video {
+    /* Make video to at least 100% wide and tall 
+    min-width: 100vw; 
+    min-height: 100vh; 
+    
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video 
+    width: auto;
+    height: auto;
+    /* Center the video 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  h1{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:white;
+    font-size:12vmin;
+    width:100%;
+    text-align: center;
+  }
+  #ohg{
+      width:100%;
+      margin-top:35vh;
+  }
+  #slogan{
+      width:100%;
+      margin:0;
+  }
+  #slogan p{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:white;
+    font-size:4.5vmin;
+    margin-top:2vmin;
+    width:100%;
+    text-align: center;
+  }
+  #landr{
+      margin: 6vmin auto 0 auto;
+      height:calc(3vmin + 20px);
+      width:calc(20% + 180px);
+  }
+  #login, #register {
+    width:calc(20% + 90px);
+    height:100%;
+    border-radius:30px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #108ea7;
+    transition: background-color 0.5s ease-in-out;
+  }
+  #login p, #register p{
+    width:100%;
+    text-align: center;
+    color:white;
+    font-weight:700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:3vmin;
+    margin:0;
+    padding:5px;
+    cursor:pointer;
+  }
+  #login {
+    float:left;
+  }
+  #login:hover{
+    background-color:#108ea7
+  }
+  #register:hover{
+      background-color:transparent;
+  }
+  #register{
+    float:right;
+    background-color:#108ea7
+  }
+
+  .KenUit{
+    width:100%;
+    height:calc(9vh + 20px);
+    top:0;
+    font-family: 'Lato', sans-serif ;
+    color: black;
+    padding:0;
+    margin: 2vw 0 0 2vw;
+    font-size:8vmin;
+    text-align: center;
+}
+
+.KVUhelften{
+    float:left;
+    width:calc(50% - 3vw);
+    height:calc(100% - 4vw);
+    margin: 2vw 0 0 2vw;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    cursor:pointer;
+
+    background-color: rgba(0,0,0,0.15);
+    border-radius: 3px;
+    background-size:cover;
+    background-position: center center;
+}
+.KVUleft{
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:black;
+    font-size:3vmin;
+    margin-top:4vmin;
+    margin-left:6vmin;
+    margin-bottom:2vmin;
+}
+
+#fromP{
+    float:left;
+    margin-left:4vmin;
+    background-color: rgba(0,0,0,0.15);   
+}
+
+.profielLabelKVU{
+    width: 200px;
+    font-family: 'Lato', sans-serif;
+    padding:0;
+    margin:0;
+    color:black;
+    font-size:3vmin;
+    /* margin-top:2vmin; 
+    margin-left:2vmin;
+    margin-bottom:2vmin;
+}
+
+.invoerLabelKVU{
+    width: 200px;
+    /* margin-top:2vmin; 
+    margin-left:2vmin;
+    margin-bottom:2vmin;
+}
+
+#speluitnodigenknop{
+    margin-top:6vmin;
+}
+
+.vriendOnline{
+    float:left;
+    /* width:100px; 
+    height:250px;
+    background-color: #108ea7;
+    width:calc(30% - 3vw);
+    /* height:calc(60% - 4vw); 
+    margin: 2vw 0 2vw 2vw;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+.fotoVriend{
+    float:left;
+    width:100%;
+    height:190px;
+    cursor:pointer;
+    background-color:#108ea7;
+}
+
+.naamVriend{
+    float:left;
+    width:100%;
+    height:25px;
+    cursor:pointer;
+    background-color:#108ea7;
+}
+
+.naarChat{
+    float:left;
+    width:100%;
+    height:35px;
+    background-color: #108ea7;
+    cursor:pointer;
+}
+
+.vraagtekenTekst{
+    float:left;    
+    font-family: 'Lato', sans-serif;
+    color:black;
+    font-size:3vmin;
+    margin-left:5vmin;
+    margin-top:5vmin;
+    
+}
+
+#vraagteken{
+    background-color: rgba(0,0,0,0.15);
+}
+
+.button{
+    float:left;
+    margin-left:2vmin;
+    width:15vmin;
+    height:15vmin;
+    border-radius:7vmin;
+    background-color:#108ea7;
+    text-align:center;
+    margin-top:2vmin;
+    margin-bottom:2vmin;
+    
+}
+
+.button p{
+    margin-top:2vmin;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    color:black;
+    font-size:8vmin;
+    text-align:center;
+}
+  #invite{
+    position:absolute;
+    display:none;
+    width:100%;
+    background-color:rgba(0,0,0,0.7);
+    bottom:0;
+    height:36px;
+    cursor:pointer;
+    }
+#invite p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    font-size:17px;
+    padding:0;
+    color:white;
+    font-weight: 700;
+    padding: 6px 0 6px 0;
+    width:100%;
+    text-align: center;
+}
+#status{
+    margin-left:auto;
+    margin-right:auto;
+}
+.queuestatus {
+    width:40px;
+    height:40px;
+    background-color:grey;
+    margin:10px;
+    float:left
+}
+.accepted {
+    background-color:green;
+}
+.declined {
+    background-color:red;
+}
+#modalbg {
+position: absolute;
+z-index:100;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-color:rgba(0,0,0,0.5);
+display:none;
+}
+#modal {
+width:350px;
+height:230px;
+position: relative;
+margin-left:auto;
+margin-right:auto;
+margin-top:calc(50vh - 100px);
+background-color:white;
+box-sizing:border-box;
+padding:20px;
+-webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+}
+#invitebuttons {
+display:none;
+margin-left:10px;
+margin-top:20px;
+}
+#confirmbuttons {
+display:none;
+margin-left:10px;
+margin-top:20px;
+}
+#closebuttons {
+display:none;
+margin-left:10px;
+margin-top:20px;
+}
+#hiddenform{
+display:none;
+}
+.unavailable {
+    color:red;
+    cursor:default;
+}
+.pointer{
+    cursor: pointer;
+}
+
+
+/* PROFIEL 
+
+ hr.new1{
+     border: 0.8px dotted grey;
+ }
+
+ .profielGegevens{
+     float: left;
+     right:2vw;
+     width: 50%;
+     min-width:210px;
+     border-radius: 5px;
+     padding:0;
+     margin:0.2vw 0 0 0;
+     text-align: center;
+     font-family: sans-serif;
+ }
+ .profiel2{
+     float: left;
+     right:2vw;
+     width: 50%;
+     min-width:150px;
+     border-radius: 5px;
+     padding:0;
+     margin:0.2vw 0 0 0;
+     text-align: center;
+     font-family: sans-serif;
+ }
+
+ .vriendSelectie{
+     float: left;
+     right: 2vw;
+     width: 50%;
+     min-width:220px;
+     border-radius: 5px;
+     padding:0;
+     margin:0.2vw 0 0 0;
+     text-align: center;
+     font-family: sans-serif;
+ }
+ .vriendSelectie1{
+     float: left;
+     right: 2vw;
+     width: 50%;
+     min-width:150px;
+     border-radius: 5px;
+     padding:0;
+     margin:0.2vw 0 0 0;
+     text-align: center;
+     font-family: sans-serif;
+ }
+ .informatieBlok {
+     font-family: 'Lato', sans-serif;
+     color: black;
+     
+ }
+ .welkomTekst {
+     font-family: 'Lato', sans-serif;
+     font-size: 19px;
+     color: #598c52;
+     float: left;
+     margin: 1.5vw 1vw 0vw 18vw;  
+     position: fixed;
+     top:calc(10vh + 20px);
+     left:20vw;
+     width: 27%;
+ }
+ #profielFoto {
+     background-image:url(profielfoto.jpg);
+     background-size:cover;
+     background-position: center center; 
+     width: 125px;
+     height: 200px;
+     float: right;
+     margin: 1.5vw 1vw 0vw 0vw;
+     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     border-radius: 7px;
+ }
+ .profielLabel{
+     font-family: 'Lato', sans-serif;
+     text-align: left;
+     font-size: 19px;
+     color: white;
+     width: auto;
+     height: 11px;
+     margin: 1vw 0vw 0vw 3vw;
+ /*
+     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     border-radius: 7px;   
+ 
+ }
+ .profielLabela {
+     font-family: 'Lato', sans-serif;
+     text-align: right;
+     font-size: 3vmin;
+     color: white;
+     width: auto;
+     height: 11px;
+     margin: -1vw -7.3vw 0vw 0vw;
+ }
+ .invoerLabel {
+     text-align: center;
+     font-family: 'Lato', sans-serif;
+     font-size: 1.8vmin;
+     color:#108ea7;
+     background-color: #e8e8e8;
+     width: 250px;
+     height: 27px;
+     margin: 1vw 1vw 0vw 3vw;
+     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+    border-radius: 7px; 
+ }
+ .invoerLabela {
+     text-align: center;
+     font-family: 'Lato', sans-serif;
+     font-size: 3vmin;
+     color:#108ea7;
+     background-color: #e8e8e8;
+     width: 60px;
+     height: 27px;
+     margin: 1vw 0vw 0vw 18.3vw;
+     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    border-radius: 3px; 
+ }
+ .profielButton {
+    float:left;
+     width:12vmin;
+     height:12vmin;
+     background-color:#108ea7;
+     cursor:pointer;
+ }
+ .profielButton1 {
+     width:7vmin;
+     height:7vmin;
+     border-radius:20vmin;
+     background-color:#108ea7;
+     margin:calc(50% - 3.5vmin) auto 0 auto;
+     -webkit-box-shadow: 0px 0px 10px 1px rgba(5,5,5,5);
+     -moz-box-shadow: 0px 0px 10px 1px rgba(5,5,5,5);
+     box-shadow: 0px 0px 10px 1px rgba(5,5,5,5);
+ }
+ .profielButton2 {
+     width:7vmin;
+     height:7vmin;
+     font-size: 40px;
+     color: #e8e8e8;
+     margin:calc(50% - 3.5vmin) auto 0 auto;
+ }
+ .vriendHeader{
+    height:12vmin;
+    width:calc(100% - 12vmin);
+    float:left;
+    margin:0;
+    padding:0;
+    background-color:rgba(0,0,0,0.5)
+ }
+ .profielHeader{
+    height:12vmin;
+    width:calc(100% - 12vmin);
+    float:left;
+    margin:0;
+    padding:0;
+    background-color:rgba(0,0,0,0.5)
+ }
+ .vriendButton {
+    float:left;
+     width:12vmin;
+     height:12vmin;
+     background-color:#108ea7;
+     cursor:pointer;
+ }
+ .vriendButton1 {
+     width:7vmin;
+     height:7vmin;
+     border-radius:20vmin;
+     background-color:#108ea7;
+     margin:calc(50% - 3.5vmin) auto 0 auto;
+     -webkit-box-shadow: 0px 0px 10px 1px rgba(5,5,5,5);
+     -moz-box-shadow: 0px 0px 10px 1px rgba(5,5,5,5);
+     box-shadow: 0px 0px 10px 1px rgba(5,5,5,5);
+ }
+ .vriendButton2 {
+     width:7vmin;
+     height:7vmin;
+     font-size: 40px;
+     color: #e8e8e8;
+     margin:calc(50% - 3.5vmin) auto 0 auto;
+ }
+     
+ .VriendUitnodigen {
+     position: fixed;
+     top:calc(20vh + 20px);
+     left:2vw;
+     width: 28%;
+     border-radius: 5px;
+     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+     height:calc(70vh - (10vh + 20px + 10vw));
+     padding:0;
+     margin:2vw 0 0 0;
+     background-color:rgba(0,0,0,0.15);
+ }
+ .VriendToevoegen {
+     position: fixed;
+     top:calc(20vh + 20px);
+     right:2vw;
+     width: 28%;
+     border-radius: 5px;
+     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+     height:calc(70vh - (10vh + 20px + 10vw));
+     padding:0;
+     margin:2vw 0 0 0;
+     background-color:rgba(0,0,0,0.15);
+ }
+ .uitnodigingtekst {
+     font-family: 'Lato', sans-serif;
+     font-size: 19px;
+     color: #598c52;
+     float: left;
+     margin: 1.5vw 1vw 0vw 18vw;  
+     position: fixed;
+     top:calc(10vh + 20px);
+     left:20vw;
+     width: 27%;
+ }
+ .customselect    {
+     display: none;
+     font-family: 'Lato', sans-serif;
+     font-size: 19px;
+     position: absolute;
+     width: 10%;
+ }
+
+
+ .profielBlok{
+    float: left;
+    width: 47vw;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+    height:calc(100% - 4vw);
+    padding:0;
+    margin:2vw 0 0 2vw;
+    background-color:rgba(0,0,0,0.15);
+    overflow-y:auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+.vriendBlok {
+    float:left;
+    width: 47vw;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+    height:calc(100% - 4vw);
+    padding:0;
+    overflow-y:auto;
+    margin:2vw 0 0 2vw;
+    background-color:rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+ @media screen and (max-width: 700px) {
+    .profielBlok{
+        width: 96vw;
+    }
+    .vriendBlok {
+        width: 96vw;
+
+    }
+  }
+
+  @media screen and (min-width: 701px) {
+    .profielBlok{
+        width: 47vw;
+    }
+    .vriendBlok {
+        width: 47vw;
+    }
+  }
+ .KVUhelften:hover{
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+*/
