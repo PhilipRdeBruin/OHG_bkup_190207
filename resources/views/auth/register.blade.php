@@ -1,10 +1,15 @@
-<?php $active_navlink = "notnav" ?>
+
+<?php 
+    $active_navlink = "notnav";
+    $pict = randomx(1, 9);
+?>
 
 @extends('layouts.standaard')
 
 
 @section('content')
-<div class="container">
+<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png);z-index:0"></div>
+<div class="container unlogin_bkgr">
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
             <div class="card mt-5">
@@ -195,7 +200,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Registeer') }}
                                 </button>
                             </div>
                         </div>
@@ -211,3 +216,17 @@
 </div>
 
 @endsection
+
+<?php
+    function randomx($min, $max) {
+        $cnt = 0;
+        for ($i = $min; $i <= $max; $i++) {
+            $ar[$cnt] = $i;
+            $cnt++;
+        }
+        shuffle($ar);
+        $rnd = $ar[0];
+
+        return $rnd;
+    }
+?>

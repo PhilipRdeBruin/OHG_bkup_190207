@@ -1,4 +1,14 @@
 
+html, body, section {
+    height: 100%;
+    background: rgb(145, 140, 125)  /* #888; */
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
 
 .bg_blauw {
     background      : #46d;

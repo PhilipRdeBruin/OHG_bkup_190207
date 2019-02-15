@@ -10,6 +10,7 @@
     $spelletjes = \App\Spelletje::All();
     $active_navlink = 'keuzevrienduitnodiging'; 
     $filterkey = "filter"; 
+    $pict = randomx(1, 9);
 
     foreach ($spelletjes as $spelletje) {
         $parameter['id'] = $spelletje->id;
@@ -22,51 +23,56 @@
 
 @section('content')
 
-<div class="conainer">
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-6" style="text-align:center">
-            <h1><span class="kl_blauw">Kennis uitnodigen</span></h1><br>
+<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png); z-index:0"></div>
+<div class="unlogin_bkgr" id="main">
+    <!-- Titel-blok -->
+    <div class="row justify-content-center mt5 titeldiv">
+        <div class="col-md-12 titeltekst" style="text-align:center">
+            <h1>Kennis uitnodigen</h1>
         </div>
     </div>
 
-   
-    <div class="row justify-content-center mt-5"> 
-     <!--links-->       
-        
-        <div class="col-md-6">
-            <h5 style="color:#24a;font-weight:bold">Reserveer hier een spel,<br>en stuur de uitnodiging per mail naar uw medespeler(s)</h5>
-    
+    <div class="row justify-content-center mt5 bodydiv">
 
-            <form id="form_speleruitnodigen" method="post" action="{{ route('actiefspeltoevoegen') }}" style="margin-top:40px">
-                @csrf
-                <table>
-                    <tr>
-                        <th style="width:30%>"><th style="width:30%>"><th style="width:30%>">
-                    <tr>
-                        <td>spel:</td>                        
-                        <td>
+    <!-- links -->
+        <div class="col-md-6">
+            <div class="leftblock">
+                <h5>Reserveer hier een spel,<br>en stuur de uitnodiging per mail naar uw medespeler(s)</h5>
+
+                <form id="form_speleruitnodigen" method="post" action="{{ route('actiefspeltoevoegen') }}">
+                    @csrf
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            spel:
+                        </div>
+
+                        <div class="col-md-6" style="padding:0">
                             <select class="form-control" onchange="showxspelers('{{ $spelletjes }}')" name="spel" id="spel">
                                 <option value="leeg" selected></option>
                                 @foreach($spelletjes as $value)
                                     <option value="{{ $value->id }}">{{ $value->spel_naam }}</option>
                                 @endforeach
                             </select>
-                        </td>
-                        <td id="rol_hdr"><u><i>Rol/Team</u></i></td>
-                    </tr>
+                        </div>
 
+                        <div class="col-md-3" id="rol_hdr" style="padding:0 10px">
+                            <u><i>Rol/Team</u></i>
+                        </div>
+                    </div>
+                    <hr/>
                     @for ($i=1; $i<=4; $i++)
-                        <tr>
-                            <td id="spelerlabel{{ $i }}">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3" id="spelerlabel{{ $i }}">
                                 @if ($i == 1)
                                     gastheer:
                                 @else
                                     speler{{ $i }}:
-                                @endif
-                            </td>                        
-                            <td>
-                                <select class="form-control" name="spelers[]" id="speler{{ $i }}">
+                                @endif                               
+                            </div>
 
+                            <div class="col-md-6" style="padding:0">
+                                <select class="form-control" name="spelers[]" id="speler{{ $i }}">
                                     <?php
                                         $vn = Auth::user()->voornaam;
                                         $tv = (Auth::user()->tussenv != NULL) ? " " . Auth::user()->tussenv : "" ;
@@ -90,33 +96,39 @@
                                         <option value="{{ $vriend->id }}">{{ $vriendy }}</option>
                                     @endforeach
                                 </select>
-                            </td>
-                            <td>
+                            </div>
+
+                            <div class="col-md-3" style="padding:0">
                                 <select class="form-control" name="rol{{ $i }}" id="rol{{ $i }}">
                                     <option value="leeg" selected></option>
-                                </select>                                        
-                            </td>
-                        </tr>
+                                </select>    
+                            </div>
+                        </div>
                     @endfor
+                    <hr/>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            aanvangstijdstip:
+                        </div>
 
-                    <tr>
-                        <td>aanvangstijdstip:</td>
-                        <td>
-<!--
-                            <input required type="text" style="width:100px;text-align:center" id="aanvangsdatum" name="aanvangsdatum" placeholder="d-m-[jj]" onblur=zetdatum()>
-                            <input required type="text" style="width:80px;text-align:center" id="aanvangstijd" name="aanvangstijd" placeholder="uu:mm" onblur=zettijd()>
-                            <input type="hidden" name="aanvangstijdstip">
-                            <span id="ampm" style="width:20px;text-align:center"></span>
--->
-                            <input required type="text" name="aanvangstijdstip">
-                        </td>
-                    </tr>
-                </table>
-                <input id="speluitnodigenknop" type="submit" value="Uitnodiging versturen">
-            </form>                            
+                        <div class="col-md-4">
+                            <input required type="date" style="text-align:center" id="aanvangsdatum" name="aanvangsdatum" onblur=zetdatumtijd()>
+                        </div>
+
+                        <div class="col-md-4">
+                        <input required type="time" style="text-align:center" id="aanvangstijd" name="aanvangstijd" onblur=zetdatumtijd()>
+                        </div>
+
+                        <input type="hidden" id="aanvangstijdstip" name="aanvangstijdstip">
+                    </div>
+                    <input id="speluitnodigenknop" type="submit" value="Uitnodiging versturen">
+                </form>
+            </div>
         </div>
 
-        <div id="spelletjes" style="display:none">{{ $spelletjes}}</div>
+
+    <!-- rechts -->
+        <div id="spelletjes" style="display:none">{{ $spelletjes}}</div>        
         <script>
             spel = document.getElementById("spel");
             if (spel.value > 0) { 
@@ -125,54 +137,71 @@
             };
         </script>
 
+        <div class="col-md-6">
+            <div class="rightblock">
+                <h5 id="vriendenOnline">
+                    Hieronder ziet uw uw vrienden die op dit moment online zijn.
+                </h5>    
 
-    <!--rechts-->
+                <div class="row justify-content-center">                    
+                    <?php $nvr = 0; ?>              
+                    @foreach($user->vrienden as $vriend)
+                        @if($vriend->isOnline())
+                            <div class="col-md-5 card-vriend">
+                                <?php 
+                                    $nvr++;
+                                    $vn = $vriend->voornaam;
+                                    $tv = ($vriend->tussenv != NULL) ? " " . $vriend->tussenv : "" ;
+                                    $an = $vriend->achternaam;
+                                    $vriendy = $vn . $tv . " " . $an;           
+                                ?>
 
-    <div class="col-md-4 col-md-offset-2">
-        <div class="row justify-content-center md-4">
-            <h5 id="vriendenOnline" style="color:#24a;font-weight:bold">
-                Hieronder ziet uw uw vrienden die op dit moment online zijn.
-            </h5>
-        <br>
-    </div>       
-        
-    <div class="row">                    
+                                <form action = "{{ route('naarChat', ['vriend' => $vriend->gebr_naam ]) }}" method = "POST" > 
+                                    @csrf    
+                                    <div class="card mt-4">   
+                                        <div class="card-header">                     
+                                            {{$vriendy}}                                                
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            <img class="card-img-top" src="{{ asset('afbeeldingen/vrienden/' . $vriend->gebr_naam . '.png') }}" alt="Card image cap">
+                                        </div>
 
-        <?php $nvr = 0; ?>              
-        @foreach($user->vrienden as $vriend)
-            @if($vriend->isOnline())
-                <?php $nvr++; ?>
-                <form action = "{{ route('naarChat', ['vriend' => $vriend->gebr_naam ]) }}" method = "POST" > 
-                @csrf    
-                    <div class="card mt-4">   
-                        <div class="card-header">                     
-                            <li> {{$vriend->gebr_naam}}</li>
-                                                
-                        </div>
+                                        <input type="submit" class="btn btn-primary btn-mpl" style="font-weight:bold" value="kies samen een spel">
+                                    </div>
+                                </form>
+                            </div>               
+                        @endif
+                    @endforeach
+                    <p id="content_vrienden-online" style="display:none">{{ $nvr }}</p>    
+                </div>
 
-                        <div class="card-body">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                        
-                        </div>                
-                        <input type="submit" class="btn btn-primary" value="samen overleggen wat te spelen">
-                        
-                    </div>
-                </form>               
-                    
-            @endif
-        @endforeach
-
-        <p id="content_vrienden-online" style="display:none">{{ $nvr }}</p>    
+                <script>
+                    nvrienden = document.getElementById("content_vrienden-online").innerHTML;
+                    if (nvrienden > 0) {
+                        txt = "Hieronder ziet uw uw vrienden die op dit moment online zijn.";
+                    } else {
+                        txt = "Er zijn momenteel geen vrienden van u online.";
+                    }           
+                    document.getElementById("vriendenOnline").innerHTML = txt;
+                </script>
+            </div>             
+        </div>
     </div>
-
-    <script>
-        nvrienden = document.getElementById("content_vrienden-online").innerHTML;
-        if (nvrienden > 0) {
-            txt = "Hieronder ziet uw uw vrienden die op dit moment online zijn.";
-        } else {
-            txt = "Er zijn momenteel geen vrienden van u online.";
-        }           
-        document.getElementById("vriendenOnline").innerHTML = txt;
-    </script>       
+</div>
 
 @endsection
+
+<?php
+    function randomx($min, $max) {
+        $cnt = 0;
+        for ($i = $min; $i <= $max; $i++) {
+            $ar[$cnt] = $i;
+            $cnt++;
+        }
+        shuffle($ar);
+        $rnd = $ar[0];
+
+        return $rnd;
+    }
+?>

@@ -41,9 +41,15 @@
     padding         : 10px;
 }
 
+.card-header {
+    font-weight     : bold;
+    color           : white;
+    background      : #444;
+}
+
 .card-header-mpl {
     color           : white;
-    background      : #46d;
+    background-color:#108ea7; /* #46d; */
     border-radius   : 20px 20px 0 0;  
 }
 
@@ -56,6 +62,10 @@
 .card-title-mpl {
     font-weight     : bold;
     text-align      : center; 
+}
+
+.content {
+    height:
 }
 
 .div-spel {
@@ -356,7 +366,7 @@
 
 #rol_hdr {
     padding          : 0 50px;
-    display          : none;
+    visibility       : hidden;
 }
 
 .spelknoppen {
@@ -382,11 +392,14 @@
 }
 
 #form_speleruitnodigen {
-    width: 90%;
+    width: 100%;
     padding: 20px;
     background: #ddd;
     border: 1px solid #bbb;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 }
 
 #speluitnodigenknop {
@@ -399,4 +412,74 @@
     background      : #007bff;
     border          : 1px solid #007bff;
     border-radius   : 5px; 
+}
+
+.titeldiv {
+    margin: 2.5% 6.75% 0 6.75%;
+    padding: 1.5% 0;
+    width: 87.5%;
+    background: #ccc;
+    opacity: 0.75;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);;
+}
+
+.titeldiv h1 {
+    color: #108ea7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: calc(3.25vmin + 14px);
+    font-weight: bold;
+}
+
+.bodydiv {
+    margin: 1.25% 2.5% 2.5% 2.5%;
+    width: 95%;
+    height:80%; 
+}
+
+.leftblock, .rightblock {
+    margin: 5%;
+    width: 90%;
+    /* height: 90%; */
+    /* background: green; */
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(255,255,255,0.5);;
+}
+
+.leftblock h5, .rightblock h5 {
+    margin-bottom:0;
+    min-height: 12.5vmin;
+    padding: 20px;
+    color: #ddd;
+    text-align: center;
+    font-weight: bold;
+    background: black;
+    opacity: 0.725;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body img {
+    height: auto;
+    width: 90%;
+}
+
+.card-vriend {
+    padding: 0 10px 20px 10px;
+    text-align: center;
+}
+
+.btn-mpl {
+    font-size:calc(2.6vh - 4px);
+}
+
+#speluitnodigenknop{
+    margin-top:4vmin;
+    margin-left: 25%;
+    width: 50%;
 }

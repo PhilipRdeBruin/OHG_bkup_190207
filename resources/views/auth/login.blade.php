@@ -1,14 +1,20 @@
 
-<?php $active_navlink = "notnav" ?>
+<?php
+    $active_navlink = "notnav";
+    // $act_lnk = init_ActiveLinks($active_navlink);
+    // phpAlert("Hallo Nav!");
+    $pict = randomx(1, 9);
+?>
 
 @extends('layouts.standaard')
 
 
 @section('content')
-<div class="container">
+<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png); z-index:0"></div>
+<div class="container unlogin_bkgr">
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
-            <div class="card" style="background:#eee">
+            <div class="card" style="background:#eee;margin-top:20%;">
                 <div class="card-header card-header-mpl cardhdr-pos">{{ __('Inloggen') }}</div>
 
                 <div class="card-body">
@@ -75,3 +81,17 @@
     </div>
 </div>
 @endsection
+
+<?php
+    function randomx($min, $max) {
+        $cnt = 0;
+        for ($i = $min; $i <= $max; $i++) {
+            $ar[$cnt] = $i;
+            $cnt++;
+        }
+        shuffle($ar);
+        $rnd = $ar[0];
+
+        return $rnd;
+    }
+?>

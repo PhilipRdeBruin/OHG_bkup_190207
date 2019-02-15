@@ -16,9 +16,11 @@ function showxspelers(spelletjes) {
         }
     }
 
-    arrol = spelletjes[i]['rollen'].split(";");
-    if (arrol.length > 1) {
-        document.getElementById("rol_hdr").style.display = "inline";
+
+    if (spelletjes[i]['rollen'] != null) {
+        arrol = spelletjes[i]['rollen'].split(";");
+
+        document.getElementById("rol_hdr").style.visibility = "visible";
         for (ii = 1; ii <= nsplr; ii++) {
             rollijst = document.getElementById("rol" + ii);
             rollijst.style.display = "inline";
@@ -35,36 +37,17 @@ function showxspelers(spelletjes) {
         }
     } else {
         // alert("hallo...");
-        document.getElementById("rol_hdr").style.display = "none";
+        document.getElementById("rol_hdr").style.visibility = "hidden";
         for (ii = 1; ii <= 4; ii++) {
             document.getElementById("rol" + ii).style.display = "none";
         }
     }
 }
 
-var datumarr = new Array;
-var tijdarr = new Array;
-var d = new Date();
-
-function zetdatum() {
-    datum = document.getElementById("aanvangsdatum");
-    datumarr = datum.value.split("-");
-    jaar = (datumarr.length == 3) ? datumarr[2] : "";    
-    jaar = (jaar.length == 2) ? "20" + jaar : jaar;
-    jaar = (datumarr.length == 2) ? d.getFullYear() : jaar;
-    datum.value = datumarr[0] + "-" + datumarr[1] + "-" + jaar;
-    strE = jaar + "-" + datumarr[1] + "-" + datumarr[0];
-    dchk = new Date(strE);
-    if (dchk != undefined) {
-        document.getElementById("aanvangstijdstip").value = strE + strRi;
-        // Hier VERDER...
-    } else {
-
-    }
-}
-
-function zettijd() {
-    tijd = document.getElementById("aanvangstijd");
-    tijdarr = tijd.value.split(":");
-    alert(tijd.value);
+function zetdatumtijd() {
+    datum = document.getElementById("aanvangsdatum").value;
+    tijd = document.getElementById("aanvangstijd").value;
+    datumtijd = datum + " " + tijd;
+    document.getElementById("aanvangstijdstip").value = datumtijd;
+    // alert ("datumtijd = " + document.getElementById("aanvangstijdstip").value);
 }

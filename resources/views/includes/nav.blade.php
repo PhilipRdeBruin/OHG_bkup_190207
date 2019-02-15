@@ -8,6 +8,7 @@
         <?php $active_navlink = ""; //TODO: refactor active links ?>
     @endif
     <?php $act_lnk = init_ActiveLinks($active_navlink) ?>
+    <?php // phpAlert("Hallo Nav!"); ?>
     
     <div class="mr-auto"> </div>
         <!-- <a class="navbar-brand mx-auto" id="titel"><b><i><span class="kl_wit vet">O</span>ud Hollands Gamen</i></b></a> -->
@@ -67,7 +68,7 @@
                 </ul>
             </div>
         </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <button style="background:#108ea7" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
