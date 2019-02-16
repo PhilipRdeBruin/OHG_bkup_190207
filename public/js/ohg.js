@@ -37,14 +37,18 @@ function notification(en) {
 }
 
 function resSite() {
-	// variables
-    var containerW = document.getElementById('games').offsetWidth;
+    // variables
+    
+    // alert ("Hoi resSite()...");
+
+    var containerW = document.getElementById('gamesx').offsetWidth;
+    // alert("containerW = " + containerW);
     containerW = containerW - (window.innerWidth/100*2);
-    console.log(containerW);
+    console.log("containerW = " + containerW);
     var countSites = Math.floor(containerW / 250);
-    console.log(countSites);
+    console.log("countSites = " + countSites);
     var divWidth = (containerW / countSites) - (window.innerWidth/100*2);
-    console.log(divWidth);
+    console.log("divWidth = " + divWidth);
 	var divHeight = (divWidth / 4) * 4;
 	//Resize siteBlok
 	var siteBlok = document.getElementsByClassName("game");

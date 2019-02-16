@@ -10,7 +10,7 @@
     $spelletjes = \App\Spelletje::All();
     $active_navlink = 'keuzevrienduitnodiging'; 
     $filterkey = "filter"; 
-    $pict = randomx(1, 9);
+    $pict = rand(1, 16);
 
     foreach ($spelletjes as $spelletje) {
         $parameter['id'] = $spelletje->id;
@@ -86,7 +86,7 @@
                                         <option value="leeg" selected></option>
                                     @endif
 
-                                    @foreach($user->vrienden as $vriend)
+                                    @foreach($user->vrienden->sortBy('achternaam') as $vriend)
                                         <?php
                                             $vn = $vriend->voornaam;
                                             $tv = ($vriend->tussenv != NULL) ? " " . $vriend->tussenv : "" ;
@@ -145,7 +145,7 @@
 
                 <div class="row justify-content-center">                    
                     <?php $nvr = 0; ?>              
-                    @foreach($user->vrienden as $vriend)
+                    @foreach($user->vrienden->sortBy('achternaam') as $vriend)
                         @if($vriend->isOnline())
                             <div class="col-md-5 card-vriend">
                                 <?php 
@@ -191,17 +191,3 @@
 </div>
 
 @endsection
-
-<?php
-    function randomx($min, $max) {
-        $cnt = 0;
-        for ($i = $min; $i <= $max; $i++) {
-            $ar[$cnt] = $i;
-            $cnt++;
-        }
-        shuffle($ar);
-        $rnd = $ar[0];
-
-        return $rnd;
-    }
-?>

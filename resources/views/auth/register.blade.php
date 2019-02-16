@@ -1,7 +1,7 @@
 
 <?php 
     $active_navlink = "notnav";
-    $pict = randomx(1, 9);
+    $pict = rand(1, 16);
 ?>
 
 @extends('layouts.standaard')
@@ -216,17 +216,3 @@
 </div>
 
 @endsection
-
-<?php
-    function randomx($min, $max) {
-        $cnt = 0;
-        for ($i = $min; $i <= $max; $i++) {
-            $ar[$cnt] = $i;
-            $cnt++;
-        }
-        shuffle($ar);
-        $rnd = $ar[0];
-
-        return $rnd;
-    }
-?>

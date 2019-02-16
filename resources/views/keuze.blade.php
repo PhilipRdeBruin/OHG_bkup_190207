@@ -46,9 +46,13 @@
             <div id="notifications">
                 <?php $cnt = 0; ?>
                 @foreach ($actievespellen as $actiefspel)
-                    <?php $cnt++; ?>
+                    <?php 
+                        $cnt++;
+                        $datum = $actiefspel->aanvangstijdstip;
+                        $datum = date_format(date_create($datum), "j M Y  g:i A");
+                    ?>
                     <div class="notification">
-                        <p style="width:80%;line-height:2">{{ $actiefspel->spelletje->spel_naam }} <br> {{ $actiefspel->aanvangstijdstip }}</p>
+                        <p style="width:80%;line-height:2">{{ $actiefspel->spelletje->spel_naam }} <br> {{ $datum }}</p>
                         <div onclick="document.getElementById('actspel').submit()" class="spelen">
                             <p>Speel</p>
                         </div>
