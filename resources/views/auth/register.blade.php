@@ -3,10 +3,7 @@
     $active_navlink = "notnav";
     $spelletjes = \App\Spelletje::All();
     $pict = rand(1, 16);
-    $rndspel = $spelletjes->where('id', $pict);
-    foreach ($rndspel as $rndsp) {
-        $alias = $rndsp->alias;
-    }
+    $alias = $spelletjes->where('id', $pict)->first()->alias;
 ?>
 
 @extends('layouts.standaard')

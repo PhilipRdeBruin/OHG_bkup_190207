@@ -103,14 +103,25 @@
                                     </span>
                                 @endif
                             </div>
+                        </div>                      
+
+                        <div class="form-group row">
+                            <label for="straatnaam" class="col-md-4 col-form-label text-md-right">{{ __('Straatnaam') }}</label>
+                            <div class="col-md-8">
+                                <input id="straatnaam" type="text" class="form-control{{ $errors->has('straatnaam') ? ' is-invalid' : '' }}" name="straatnaam" value="{{ $user->straatnaam }}" >
+
+                                @if ($errors->has('straatnaam'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('straatnaam') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
-                      
 
                         <div class="form-group row">
                             <label for="huisnr" class="col-md-4 col-form-label text-md-right">{{ __('Huisnummer') }}</label>
-
                             <div class="col-md-8">
-                                <input id="huisnr" type="text" class="form-control{{ $errors->has('postcode') ? ' is-invalid' : '' }}" name="huisnr" value="{{ $user->huisnr }}" >
+                                <input id="huisnr" type="text" class="form-control{{ $errors->has('huisnr') ? ' is-invalid' : '' }}" name="huisnr" value="{{ $user->huisnr }}" >
 
                                 @if ($errors->has('huisnr'))
                                     <span class="invalid-feedback" role="alert">

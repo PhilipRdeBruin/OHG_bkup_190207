@@ -5,10 +5,7 @@
     // $act_lnk = init_ActiveLinks($active_navlink);
     // phpAlert("Hallo Nav!");
     $pict = rand(1, 16);
-    $rndspel = $spelletjes->where('id', $pict);
-    foreach ($rndspel as $rndsp) {
-        $alias = $rndsp->alias;
-    }
+    $alias = $spelletjes->where('id', $pict)->first()->alias;
 ?>
 
 @extends('layouts.standaard')

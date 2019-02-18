@@ -12,10 +12,7 @@
     $active_navlink = 'keuzevrienduitnodiging'; 
     $filterkey = "filter"; 
     $pict = rand(1, 16);
-    $rndspel = $spelletjes->where('id', $pict);
-    foreach ($rndspel as $rndsp) {
-        $alias = $rndsp->alias;
-    }
+    $alias = $spelletjes->where('id', $pict)->first()->alias;
 
     // phpAlertx("pict, alias = $pict, $alias");
 
@@ -30,7 +27,6 @@
 
 @section('content')
 
-<!-- <div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png); z-index:0"></div> -->
 <div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/{{ $alias }}.png); z-index:0"></div>
 <div class="unlogin_bkgr" id="main">
     <!-- Titel-blok -->
@@ -41,8 +37,7 @@
     </div>
 
     <div class="row justify-content-center mt5 bodydiv">
-
-    <!-- links -->
+    <!-- links -->           
         <div class="col-md-6">
             <div class="leftblock">
                 <h5>Reserveer hier een spel,<br>en stuur de uitnodiging per mail naar uw medespeler(s)</h5>
@@ -55,8 +50,9 @@
                             spel:
                         </div>
 
-                        <div class="col-md-5" style="padding:0">
-                            <select class="form-control" onchange="showxspelers('{{ $spelletjes }}')" name="spel" id="spel">
+                        <div class="col-md-5" style="padding:0">                        
+                            <!-- <select class="form-control" onchange="showxspelers('{{ $spelletjes }}')" name="spel" id="spelx"> -->
+                            <select class="form-control" onchange="showxspelers()" name="spel" id="spelx">
                                 <option value="leeg" selected></option>
                                 @foreach($spelletjes as $value)
                                     <option value="{{ $value->id }}">{{ $value->spel_naam }}</option>
@@ -64,7 +60,7 @@
                             </select>
                         </div>
 
-                        <div class="col-md-4" id="rol_hdr" style="padding:0 10px">
+                        <div class="col-md-4" id="rol_hdr" style="padding:15px 10px 0 30px">
                             <u><i>Rol/Team</u></i>
                         </div>
                     </div>
@@ -134,17 +130,16 @@
             </div>
         </div>
 
-
-    <!-- rechts -->
         <div id="spelletjes" style="display:none">{{ $spelletjes}}</div>        
         <script>
-            spel = document.getElementById("spel");
+            spel = document.getElementById("spelx");
             if (spel.value > 0) { 
                 spelletjes = document.getElementById("spelletjes").innerHTML;
-                showxspelers(spelletjes);
+                showxspelers();
             };
         </script>
 
+    <!-- rechts -->
         <div class="col-md-6">
             <div class="rightblock">
                 <h5 id="vriendenOnline">
@@ -201,6 +196,8 @@
 @endsection
 
 <?php
+
+    // dd($spelletjes);
     // function phpAlertx($msg) {
     //     echo '<script type="text/javascript">alert("' . $msg . '")</script>';
     // }

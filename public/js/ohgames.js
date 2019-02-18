@@ -1,5 +1,7 @@
-function showxspelers(spelletjes) {
-    selected_spel = document.getElementById("spel").value
+
+function showxspelers() {
+    selected_spel = document.getElementById("spelx").value
+    spelletjes = document.getElementById("spelletjes").innerHTML;
     spelletjes= JSON.parse(spelletjes);
     i = selected_spel * 1 - 1;
     nsplr = spelletjes[i]['aantalspelers'];
@@ -15,7 +17,6 @@ function showxspelers(spelletjes) {
             document.getElementById("rol" + ii).style.display = "none";
         }
     }
-
 
     if (spelletjes[i]['rollen'] != null) {
         arrol = spelletjes[i]['rollen'].split(";");
@@ -36,7 +37,6 @@ function showxspelers(spelletjes) {
             }
         }
     } else {
-        // alert("hallo...");
         document.getElementById("rol_hdr").style.visibility = "hidden";
         for (ii = 1; ii <= 4; ii++) {
             document.getElementById("rol" + ii).style.display = "none";
