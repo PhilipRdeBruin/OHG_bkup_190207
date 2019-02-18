@@ -685,7 +685,7 @@ h4{
     font-family: 'Lato', sans-serif;
     padding:0;
     margin:0;
-    color:white;
+    color:#ebe9dc;
     /* font-size:4.5vmin; */
     /* font-size: 36px; */
     font-size: calc(2vmin + 20px);
@@ -729,19 +729,19 @@ h4{
   #login {
     float:left;
     color: #108ea7;
-    background: white;
+    background: #ebe9dc;
   }
   #login:hover{
-    color: white;
+    color: #ebe9dc;
     background-color:#108ea7;
   }
   #register:hover{
       color:#108ea7;
-      background-color:white;
+      background-color:#ebe9dc;
   }
   #register{
     float:right;
-    color:white;
+    color:#ebe9dc;
     background-color:#108ea7;
   }
 /*
@@ -911,7 +911,7 @@ h4{
     margin-left:auto;
     margin-right:auto;
 }
-/*
+
 .queuestatus {
     width:40px;
     height:40px;
@@ -925,7 +925,7 @@ h4{
 .declined {
     background-color:red;
 }
-*/
+
 #modalbg {
     position: absolute;
     z-index:100;
@@ -938,8 +938,8 @@ h4{
 }
 
 #modal {
-    width:350px;
-    height:230px;
+    width:420px;
+    height:250px;
     position: relative;
     margin-left:auto;
     margin-right:auto;
@@ -950,6 +950,11 @@ h4{
     -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+}
+
+#modalhead {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #invitebuttons {
@@ -970,10 +975,25 @@ h4{
     margin-top:20px;
 }
 
+#declbut, #accbut {
+    margin: 0 10px;
+    padding-bottom: 2px;
+    color: white;
+    background: #26e;
+    border-radius: 7px;
+}
+
+#beginspel, #annspel {
+    padding-bottom: 2px;
+    color: white;
+    background: #26e;
+    border-radius: 7px;    
+}
+
 #hiddenform{
     display:none;
 }
-/*
+
 .unavailable {
     color:red;
     cursor:default;
@@ -981,7 +1001,7 @@ h4{
 .pointer{
     cursor: pointer;
 }
-
+/*
 
 /* PROFIEL 
 

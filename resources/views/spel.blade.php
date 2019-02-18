@@ -23,7 +23,7 @@
             <div id="spelers">
                 <div id="vs">
                     <div id="invite" onclick="invitePlayers()">
-                    <p>FIGHT</p>
+                    <p>Nodig uit</p>
                     </div>
                 </div>
                 <div class="onlinespacer" style="height:1.9%"></div>
@@ -37,8 +37,8 @@
         
     <!--HIDDEN FORM-->
     <form id="hiddenform" method="POST" action="">
-        <input id="input_act_spel" type="text" name="act_spel"></input>
-        <input id="input_speler" type="text" name="speler"></input>
+        <input id="input_act_spel" type="text" name="act_spel">
+        <input id="input_speler" type="text" name="speler">
     </form>
 
     <div id="modalbg">
@@ -48,14 +48,14 @@
             <div id="status"></div>
             <div style="clear: both"></div>
             <div id="invitebuttons">
-                <button onclick="declineInv()">Decline invite</button>
-                <button onclick="acceptInv()">Accept invite</button>
+                <button id="declbut" onclick="declineInv()">Sla uitnodiging af</button>
+                <button id="accbut" onclick="acceptInv()">Accepteer uitnodiging</button>
             </div>
             <div id="confirmbuttons">
-                <button onclick="goToGame()">Go to game</button>
+                <button id="beginspel" onclick="goToGame()">Begin spel</button>
             </div>
             <div id="closebuttons">
-                <button onclick="closeQ()">Close queue</button>
+                <button id="annspel" onclick="closeQ()">Annuleren</button>
             </div>
         </div>
     </div>
@@ -133,7 +133,7 @@
             } else {
                 document.getElementById("online").innerHTML = `<div class="speler">
                                     <div class="spelerstatus unavailable"></div>
-                                    <p>Noone online</p>
+                                    <p>Niemand online</p>
                                 </div>
                                 <div class="onlinespacer"></div>`;
             }
@@ -151,8 +151,8 @@
             }
             acceptQueue[Object.keys(acceptQueue)[0]] = "accepted";
             renderStatus();
-            document.getElementById("modalhead").innerHTML = `Invite:`
-            document.getElementById("modaltext").innerHTML = `Game by ${data[0]}, waiting for players:`
+            document.getElementById("modalhead").innerHTML = `Uitnodiging:`
+            document.getElementById("modaltext").innerHTML = `Uitnodiging door ${data[0]}, wachtend op speler(s):`
             document.getElementById("input_act_spel").value = 124;
             document.getElementById("input_speler").value = user;
             document.getElementById("hiddenform").action = `http://sockets.styx.gg/${game}.php`;

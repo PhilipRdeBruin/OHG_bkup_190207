@@ -17,6 +17,8 @@ class CreateActievespelletjesUsersTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('act_spel_id');
             $table->unsignedInteger('speler_id');
+            $table->string('rol')->nullable();
+            $table->unsignedInteger('bevestigd');
             $table->foreign('act_spel_id')->references('id')->on('actievespelletjes');
             $table->foreign('speler_id')->references('id')->on('users');
             $table->timestamps();
