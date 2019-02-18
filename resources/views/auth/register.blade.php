@@ -1,14 +1,20 @@
 
 <?php 
     $active_navlink = "notnav";
+    $spelletjes = \App\Spelletje::All();
     $pict = rand(1, 16);
+    $rndspel = $spelletjes->where('id', $pict);
+    foreach ($rndspel as $rndsp) {
+        $alias = $rndsp->alias;
+    }
 ?>
 
 @extends('layouts.standaard')
 
 
 @section('content')
-<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png);z-index:0"></div>
+<!-- <div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png);z-index:0"></div> -->
+<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/{{ $alias }}.png); z-index:0"></div>
 <div class="container unlogin_bkgr">
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">

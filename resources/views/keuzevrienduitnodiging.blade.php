@@ -8,9 +8,16 @@
     use \App\User;
     $vrienden = \App\User::All();
     $spelletjes = \App\Spelletje::All();
+    // dd($spelletjes);
     $active_navlink = 'keuzevrienduitnodiging'; 
     $filterkey = "filter"; 
     $pict = rand(1, 16);
+    $rndspel = $spelletjes->where('id', $pict);
+    foreach ($rndspel as $rndsp) {
+        $alias = $rndsp->alias;
+    }
+
+    // phpAlertx("pict, alias = $pict, $alias");
 
     foreach ($spelletjes as $spelletje) {
         $parameter['id'] = $spelletje->id;
@@ -23,7 +30,8 @@
 
 @section('content')
 
-<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png); z-index:0"></div>
+<!-- <div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/spel{{ $pict }}.png); z-index:0"></div> -->
+<div class="login_bkgr" style="background-image: url(../afbeeldingen/spellen/{{ $alias }}.png); z-index:0"></div>
 <div class="unlogin_bkgr" id="main">
     <!-- Titel-blok -->
     <div class="row justify-content-center mt5 titeldiv">
@@ -47,7 +55,7 @@
                             spel:
                         </div>
 
-                        <div class="col-md-6" style="padding:0">
+                        <div class="col-md-5" style="padding:0">
                             <select class="form-control" onchange="showxspelers('{{ $spelletjes }}')" name="spel" id="spel">
                                 <option value="leeg" selected></option>
                                 @foreach($spelletjes as $value)
@@ -56,7 +64,7 @@
                             </select>
                         </div>
 
-                        <div class="col-md-3" id="rol_hdr" style="padding:0 10px">
+                        <div class="col-md-4" id="rol_hdr" style="padding:0 10px">
                             <u><i>Rol/Team</u></i>
                         </div>
                     </div>
@@ -71,7 +79,7 @@
                                 @endif                               
                             </div>
 
-                            <div class="col-md-6" style="padding:0">
+                            <div class="col-md-5" style="padding:0">
                                 <select class="form-control" name="spelers[]" id="speler{{ $i }}">
                                     <?php
                                         $vn = Auth::user()->voornaam;
@@ -98,7 +106,7 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-3" style="padding:0">
+                            <div class="col-md-4" style="padding:0">
                                 <select class="form-control" name="rol{{ $i }}" id="rol{{ $i }}">
                                     <option value="leeg" selected></option>
                                 </select>    
@@ -191,3 +199,9 @@
 </div>
 
 @endsection
+
+<?php
+    // function phpAlertx($msg) {
+    //     echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+    // }
+?>

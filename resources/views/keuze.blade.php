@@ -42,7 +42,7 @@
             <h3>OF</h3>
         </div>
 
-        @if (!empty($actievespellen))
+            @if (!empty($actievespellen))
             <div id="notifications">
                 <?php $cnt = 0; ?>
                 @foreach ($actievespellen as $actiefspel)

@@ -65,7 +65,7 @@
 }
 
 .content {
-    height:
+    /* height: */
 }
 
 .div-spel {
@@ -265,6 +265,7 @@
     color           : #028;
     text-wrap       : normal;
 }
+
 .hulpinfo {
     margin-top      : 60px;
     font-size       : 24px;

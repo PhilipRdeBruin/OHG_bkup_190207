@@ -39,17 +39,20 @@ class ActievespelController extends Controller
        
         return \Redirect::to('keuze');
    }
-   
     
-    public function actiefspelaccepteren ($id) {
-        $spelbevestigen = ActievespelletjeUser::findOrFail($id);
-        $spelbevestigen->bevestigd = true;
-        $spelbevestigen->save(); 
-    
-        return \Redirect::to('keuze');
-    }         
-   
-    
+    public function actiefspelaccepteren ($id = 0) {
+        $gebruiker = Auth::user();
+
+        if ($gebruiker != null && $id > 0) {
+            $spelbevestigen = ActievespelletjeUser::findOrFail($id);
+            $spelbevestigen->bevestigd = true;
+            $spelbevestigen->save();
+
+            return \Redirect::to('keuze');
+        } else {
+            return \Redirect::to('index');
+        }
+    } 
 }
     
     

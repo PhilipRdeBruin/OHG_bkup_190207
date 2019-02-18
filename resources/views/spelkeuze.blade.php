@@ -10,7 +10,10 @@
         <div id="gamesx" class="games">
 
             @foreach ($spelletjes->sortBy('spel_naam') as $spelletje)
-                <div class="game spel{{ $spelletje->id }}" onclick="location.href='spel/{{ $spelletje->id }}'">
+                <!-- <div class="game spel{{ $spelletje->id }}"  -->
+                <div class="game" 
+                    style="background-image:url('/afbeeldingen/spellen/{{ $spelletje->alias }}.png')" 
+                    onclick="location.href='spel/{{ $spelletje->id }}'">
                     <div class="titleBlok">
                         <h4>{{ $spelletje->spel_naam }}</h4>
                         <h5 id="spel{{ $spelletje->id }}">0</h5>

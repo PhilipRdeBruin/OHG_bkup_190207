@@ -12,7 +12,13 @@ class User_RelationController extends Controller
     public function vrienden()
     {
         $vrienden = \App\User::All();
-        return view('vriendtoevoegen', ['users' => $vrienden]);
+        $gebruiker = Auth::user();
+
+        if ($gebruiker != null) {
+            return view('vriendtoevoegen', ['users' => $vrienden]);
+        } else {
+            return \Redirect::to('index');
+        }
     }
                                
     public function vriendtoevoegen(Request $request)

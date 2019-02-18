@@ -39,11 +39,12 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     } 
     
-
-
-    
     public function logout(Request $request) {
         Auth::logout();
         return redirect('/index');
     }
+}
+
+function phpAlertx($msg) {
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }

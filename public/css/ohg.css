@@ -306,7 +306,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 	overflow:hidden;
 
 }
- .chess{
+/*
+.chess{
     background-image:url('../afbeeldingen/game.jpg')
 } 
 
@@ -374,7 +375,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .spel16 {
     background-image:url('/afbeeldingen/spellen/spel16.png')
 }
-
+*/
 h4{
     color:#FFF;
 	font-size:18px;
@@ -473,13 +474,14 @@ h4{
     display:none;
 }
 
-/* SPEL PAGINA
+/* SPEL PAGINA */
 
 #spel {
     width:100%;
     max-width:1200px;
     margin: 0 auto 0 auto;
 }
+
 #spelinfo, #spelers {
     height:200px;
     float:left;
@@ -509,15 +511,13 @@ h4{
     background-position: center bottom;
     overflow:hidden;
 }
+
 #vs{
     background-image: url('../afbeeldingen/vs.jpg');
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     background-position: center center;
-}
-.spelimg11 {
-    background-image: url('../afbeeldingen/schaken.jpg')
 }
 
 #spelinfo p {
@@ -532,7 +532,8 @@ h4{
     line-height:2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h6{
+
+#spelimg h6{
     font-family: 'Lato', sans-serif;
     padding:0;
     margin:0;
@@ -544,10 +545,12 @@ h6{
     padding-bottom:1vmin;
     bottom:0;
 }
+
 .onlinespacer{
     height:3%;
     width:100%;
 }
+
 .speler{
     width: 98%;
     height: 36px;
@@ -556,13 +559,16 @@ h6{
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 }
+
 .selected {
     background-color:rgba(0,0,0,0.1);
  
 }
+
 .selected p {
     color:darkblue;
 }
+
 .spelerstatus{
     width:16px;
     height:16px;
@@ -571,12 +577,15 @@ h6{
     padding:0px;
     float:left; 
 }
+
 .available{
     background-color:rgb(35, 201, 35);
 }
+
 .unavailable{
     background-color:rgb(221, 43, 43);
 }
+
 .speler p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float:left;
@@ -589,6 +598,7 @@ h6{
     margin-left:20px;
 
 }
+
 #online{
     height:58%;
     width:100%;
@@ -601,6 +611,7 @@ h6{
  background-color: rgba(0,0,0,0.7);
  float:right;
 }
+
 .invite p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float:left;
@@ -613,7 +624,7 @@ h6{
     width:100%;
     text-align: center;
 }
-*/
+
 /*index */ 
 #index {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2NkYGBoYIAAMM2ITQCqAKECRQAAdW4DBf3zkJMAAAAASUVORK5CYII=) repeat, linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 35%, rgba(255,255,255,0) 100%);
@@ -873,6 +884,7 @@ h6{
     font-size:8vmin;
     text-align:center;
 }
+*/
   #invite{
     position:absolute;
     display:none;
@@ -882,7 +894,8 @@ h6{
     height:36px;
     cursor:pointer;
     }
-#invite p {
+
+    #invite p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0;
     font-size:17px;
@@ -893,10 +906,12 @@ h6{
     width:100%;
     text-align: center;
 }
+
 #status{
     margin-left:auto;
     margin-right:auto;
 }
+/*
 .queuestatus {
     width:40px;
     height:40px;
@@ -910,48 +925,55 @@ h6{
 .declined {
     background-color:red;
 }
+*/
 #modalbg {
-position: absolute;
-z-index:100;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background-color:rgba(0,0,0,0.5);
-display:none;
+    position: absolute;
+    z-index:100;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.5);
+    display:none;
 }
+
 #modal {
-width:350px;
-height:230px;
-position: relative;
-margin-left:auto;
-margin-right:auto;
-margin-top:calc(50vh - 100px);
-background-color:white;
-box-sizing:border-box;
-padding:20px;
--webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    width:350px;
+    height:230px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:calc(50vh - 100px);
+    background-color:white;
+    box-sizing:border-box;
+    padding:20px;
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
 }
+
 #invitebuttons {
-display:none;
-margin-left:10px;
-margin-top:20px;
+    display:none;
+    margin-left:10px;
+    margin-top:20px;
 }
+
 #confirmbuttons {
-display:none;
-margin-left:10px;
-margin-top:20px;
+    display:none;
+    margin-left:10px;
+    margin-top:20px;
 }
+
 #closebuttons {
-display:none;
-margin-left:10px;
-margin-top:20px;
+    display:none;
+    margin-left:10px;
+    margin-top:20px;
 }
+
 #hiddenform{
-display:none;
+    display:none;
 }
+/*
 .unavailable {
     color:red;
     cursor:default;
