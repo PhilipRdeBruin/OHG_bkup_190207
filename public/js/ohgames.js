@@ -6,6 +6,8 @@ function showxspelers() {
     i = selected_spel * 1 - 1;
     nsplr = spelletjes[i]['aantalspelers'];
 
+    // alert ("nsplr = " + nsplr);
+
     for (ii = 3; ii <=4; ii++) {
         if (nsplr >= ii) {  
             document.getElementById("spelerlabel" + ii).style.display = "inline";
@@ -18,7 +20,11 @@ function showxspelers() {
         }
     }
 
-    if (spelletjes[i]['rollen'] != null) {
+    // alert("spelletjs[" + i + "][rollen] = " + spelletjes[i]['rollen']);
+    // dum = (spelletjes[i]['rollen'] === "") ? "yes" : "no";
+    // alert("dum = " + dum);
+
+    if (spelletjes[i]['rollen'] != "") {
         arrol = spelletjes[i]['rollen'].split(";");
 
         document.getElementById("rol_hdr").style.visibility = "visible";

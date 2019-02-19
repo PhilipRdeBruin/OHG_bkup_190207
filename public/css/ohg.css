@@ -477,8 +477,8 @@ h4{
 /* SPEL PAGINA */
 
 #spel {
-    width:100%;
-    max-width:1200px;
+    /* width:100%;
+    max-width:1200px; */
     margin: 0 auto 0 auto;
 }
 
@@ -491,17 +491,18 @@ h4{
 }
 
 #spelers{
-    width:calc(45% - 3vw);
+    /* width:calc(45% - 3vw); */
 }
+
 #spelinfo{
-    width:calc(55% - 3vw);
+    /* width:calc(55% - 3vw); */
     background-color:rgba(0,0,0,0.7);
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 }
 
-#spelimg , #vs{
+#spelimg , #vs {
     position:relative;
     height:40%;
     width:100%;
@@ -512,12 +513,14 @@ h4{
     overflow:hidden;
 }
 
-#vs{
+#vs {
     background-image: url('../afbeeldingen/vs.jpg');
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     background-position: center center;
+    /* width: 100%;
+    min-height: 250px; */
 }
 
 #spelinfo p {

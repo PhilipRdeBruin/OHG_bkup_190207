@@ -25,6 +25,6 @@
 <link rel="stylesheet"  href="{{ asset('css/KVU.css') }}" />
 
 <?php
-    $server = "192.168.2.6";
+    $server = "192.168.1.32";
     require_once($_SERVER['DOCUMENT_ROOT'] . '/functions/php_functies.php');
 ?>

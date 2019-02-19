@@ -1,7 +1,7 @@
 <?php 
     $active_navlink = 'profiel'; 
     $filterkey = "filter";
-    $server = "192.168.2.6";
+    $server = "192.168.1.32";
 ?>
 
 @extends('layouts.standaard')
@@ -11,8 +11,8 @@
     <script> window.location = "url('../../../index"; </script>
 @else -->
     <div id="main">
-        <div id="spel">
-            <div id="spelinfo">
+        <div class="row justify-content-center" id="spel">
+            <div class="col-md-6 col-sm-12" id="spelinfo">
                 <!-- <div id="spelimg" class="spelimg{{$spelletje->id}}"> -->
                 <div id="spelimg" style="background-image: url('../afbeeldingen/spelimg/{{$spelletje->alias}}.png')">
                     <h6>{{$spelletje->spel_naam}}</h6>
@@ -20,7 +20,7 @@
                 <p>{!! nl2br($spelletje->spelUitleg)!!}</p>
             </div>
 
-            <div id="spelers">
+            <div class="col-md-5 col-sm-12" id="spelers">
                 <div id="vs">
                     <div id="invite" onclick="invitePlayers()">
                     <p>Nodig uit</p>
