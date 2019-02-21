@@ -1,7 +1,11 @@
 <?php 
     $active_navlink = 'profiel'; 
     $filterkey = "filter";
-    $server = "192.168.1.32";
+    $server = "192.168.2.6";        // PC: De Knolle
+    // $server = "192.168.2.9";        // laptop: De Knolle
+    // $server = "192.168.2.12";       // laptop: De Ljurk
+    // $server = "192.168.1.32";       // laptop: Ingrid en Martin
+    // $server = "192.168.2.84";       // laptop: code gorilla
 ?>
 
 @extends('layouts.standaard')
@@ -155,7 +159,8 @@
             document.getElementById("modaltext").innerHTML = `Uitnodiging door ${data[0]}, wachtend op speler(s):`
             document.getElementById("input_act_spel").value = 124;
             document.getElementById("input_speler").value = user;
-            document.getElementById("hiddenform").action = `http://sockets.styx.gg/${game}.php`;
+            // document.getElementById("hiddenform").action = `http://sockets.styx.gg/${game}.php`;
+                document.getElementById("hiddenform").action = `http://{{ $server }}/mijnprojecten/OHGSockets/frontend/${game}.php`;
             var selected = document.getElementById("online").childNodes[0]
             console.log(selected)
             for (i = 0; i < selected.length; i++) {

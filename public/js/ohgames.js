@@ -24,7 +24,7 @@ function showxspelers() {
     // dum = (spelletjes[i]['rollen'] === "") ? "yes" : "no";
     // alert("dum = " + dum);
 
-    if (spelletjes[i]['rollen'] != "") {
+    if (spelletjes[i]['rollen'] != null && spelletjes[i]['rollen'] != "") {
         arrol = spelletjes[i]['rollen'].split(";");
 
         document.getElementById("rol_hdr").style.visibility = "visible";

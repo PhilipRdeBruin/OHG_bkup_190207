@@ -25,6 +25,10 @@
 <link rel="stylesheet"  href="{{ asset('css/KVU.css') }}" />
 
 <?php
-    $server = "192.168.1.32";
+    $server = "192.168.2.6";        // PC: De Knolle
+    // $server = "192.168.2.9";        // laptop: De Knolle
+    // $server = "192.168.2.12";       // laptop: De Ljurk
+    // $server = "192.168.1.32";       // laptop: Ingrid en Martin
+    // $server = "192.168.2.84";       // laptop: code gorilla
     require_once($_SERVER['DOCUMENT_ROOT'] . '/functions/php_functies.php');
 ?>
