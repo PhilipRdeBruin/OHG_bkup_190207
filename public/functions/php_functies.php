@@ -47,4 +47,16 @@ function get_verlopendagen($dt) {
     return $dif;
 }
 
+// function randomx($min, $max) {
+//     $cnt = 0;
+//     for ($i = $min; $i <= $max; $i++) {
+//         $ar[$cnt] = $i;
+//         $cnt++;
+//     }
+//     shuffle($ar);
+//     $rnd = $ar[0];
+
+//     return $rnd;
+// }
+
 ?>

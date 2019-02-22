@@ -12,10 +12,15 @@ class ProfielController extends Controller
 {
     public function profiel(){
         $vrtekst = DB::table('vraagtekens')->where('naam', 'profiel')->value('vrtekst');
+        $gebruiker = Auth::user();
 
-        return view('profiel')
-            ->with('user', Auth::user())
-            ->with('vrtekst', $vrtekst);
+        if ($gebruiker != null) {
+            return view('profiel')
+                ->with('user', Auth::user())
+                ->with('vrtekst', $vrtekst);
+        } else {
+            return \Redirect::to('index');
+        }        
     }
     
     public function store(Request $request){

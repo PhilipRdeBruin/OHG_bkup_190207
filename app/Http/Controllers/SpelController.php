@@ -12,22 +12,27 @@ class SpelController extends Controller
 {
     public function spelkeuze()
         {
-            $vrtekst = DB::table('vraagtekens')->where('naam', 'spelkeuze')->value('vrtekst');
-       
+            $vrtekst = DB::table('vraagtekens')->where('naam', 'spelkeuze')->value('vrtekst');       
             $spelletjes = \App\Spelletje::All();
-
-            return view('spelkeuze')->with('vrtekst',$vrtekst);
-        }
-
-        public function spel($id){
-            $vrtekst = DB::table('vraagtekens')->where('naam', 'spel')->value('vrtekst');
-
-            $spelletje = \App\Spelletje::find($id);
-
             $gebruiker = Auth::user();
 
-            return view('spel',['gebruiker' => $gebruiker, 'spelletje' => $spelletje, 'vrtekst' => $vrtekst ]);            
-            
+            if ($gebruiker != null) {
+                return view('spelkeuze')->with('vrtekst',$vrtekst);
+            } else {
+                return \Redirect::to('index');
+            }
+        }
+
+        public function spel($id = 0){
+            $vrtekst = DB::table('vraagtekens')->where('naam', 'spel')->value('vrtekst');
+            $spelletje = \App\Spelletje::find($id);
+            $gebruiker = Auth::user();
+
+            if ($gebruiker != null && $id > 0) {
+                return view('spel',['gebruiker' => $gebruiker, 'spelletje' => $spelletje, 'vrtekst' => $vrtekst ]);            
+            } else {
+                return \Redirect::to('index');
+            }            
         }
 
         public function spelSpelen($spelId, $uitgenodigdeId){

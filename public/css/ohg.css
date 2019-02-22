@@ -34,20 +34,23 @@ html, body {
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     z-index:10;
 }
-/*
+
 #main{
     width:100%;
     height:calc(100vh - (9vh + 20px));
     transition: height 0.4s ease-out;
 }
+
 #choice{
     width:100%;
     height:100%;
     position: relative;
 }
+
 #friends, #game{
     float:left;
-    width:calc(50% - 3vw);
+    /* width:calc(50% - 3vw); */
+    width: 95%;
     height:calc(100% - 4vw);
     margin: 2vw 0 0 2vw;
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
@@ -55,6 +58,7 @@ html, body {
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     cursor:pointer;
 }
+
 #friends:hover, #game:hover{
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
@@ -71,6 +75,7 @@ html, body {
     background-size:cover;
     background-position: center center;
 }
+
 #notifications {
     max-width:1200px;
     width:100%;
@@ -80,7 +85,7 @@ html, body {
     transition: height 0.4s ease-out
 }
 .notification {
-    margin-top:-1vw;
+    margin-top:2vw;
     margin-left:2vw;
     width:200px;
     height:100%;
@@ -103,6 +108,7 @@ html, body {
     color:white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
 .spelen{
     float:right;
     width:40px;
@@ -120,6 +126,7 @@ html, body {
     text-align: center;
     transform:rotate(-90deg)
 }
+
 .title {
     width:100%;
     height:30%;
@@ -129,6 +136,7 @@ html, body {
     width:100%;
     height:70%;
 }
+
 h2{
     font-family: 'Lato', sans-serif;
     padding:0;
@@ -137,6 +145,7 @@ h2{
     font-size:6vmin;
     margin-top:4vmin;
 }
+
 .left{
     float:left;
     text-align:left;
@@ -160,9 +169,10 @@ h2{
     border-right: 6vmin solid white;
     float:left;
     margin-top:5.8vmin;
-    margin-left:15vmin;
+    margin-left:10vmin;
     margin-right:5vmin;
 }
+
 .clear{
     clear:both;
 }
@@ -194,7 +204,7 @@ h3{
     transform:rotate(-20deg);
     transition: transform 0.4s ease-out
 }
-
+/*
 #head {
     width:100%;
     max-width:1200px;
@@ -206,13 +216,44 @@ h3{
 #logo{
     float:left;
     margin-left:2vw;
-    background-image: url(../afbeeldingen/logo.png);
+    background-image: url(../afbeeldingen/logo_wide.png);
     background-size:contain;
-    width:200px;
+    width:500px;
     height:calc(5vh + 20px);
     margin-top:2vh;
     background-repeat: no-repeat;
 }
+
+.login_bkgr {
+  /* The image used */
+  /*    background-image: url(../afbeeldingen/spellen/spel1.png); */
+
+  /* Full height */
+  /* height: 100%; */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+.login_bkgr {
+    /* Add the blur effect */
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+
+    opacity: 0.33;
+}
+
+.unlogin_bkgr {
+    /* Remove the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+    opacity: 1; 
+    z-index: 2;   
+}
+
 /*
 nav{
     float:right;
@@ -229,10 +270,15 @@ margin-left:50px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+<<<<<<< HEAD
  Games 
+=======
+/* Games */
+>>>>>>> fafc30b4e37a8c62aaf6d80a76b6a4b47bf9ab83
 #games{
   
 }
+
 .games {
     max-width:calc(1200px - 2%);
     width:98%;
@@ -241,6 +287,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     padding:1%;
     padding-top:0;
 }
+
 .game {
 	position:relative;
     float:left;
@@ -254,14 +301,21 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     background-size:cover;
     background-position: center;
 }
+
 .titleBlok {
 	position:absolute;
 	bottom:0;
 	z-index:10;
 	background-color:rgba(0,0,0,0.6);
 	overflow:hidden;
+
 }
+<<<<<<< HEAD
  .chess{
+=======
+/*
+.chess{
+>>>>>>> fafc30b4e37a8c62aaf6d80a76b6a4b47bf9ab83
     background-image:url('../afbeeldingen/game.jpg')
 } 
 
@@ -329,7 +383,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .spel16 {
     background-image:url('/afbeeldingen/spellen/spel16.png')
 }
-
+*/
 h4{
     color:#FFF;
 	font-size:18px;
@@ -338,6 +392,7 @@ h4{
     padding:20px;
     float:left;
 }
+
 .bullet {
     background-color:rgb(214, 28, 28);
     width:20px;
@@ -347,7 +402,8 @@ h4{
     padding:0px;
     float:right;  
 }
-h5{
+
+.titleBlok h5{
     color:rgb(214, 28, 28);
 	font-size:18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -426,13 +482,18 @@ h5{
     display:none;
 }
 
+<<<<<<< HEAD
  SPEL PAGINA
+=======
+/* SPEL PAGINA */
+>>>>>>> fafc30b4e37a8c62aaf6d80a76b6a4b47bf9ab83
 
 #spel {
-    width:100%;
-    max-width:1200px;
+    /* width:100%;
+    max-width:1200px; */
     margin: 0 auto 0 auto;
 }
+
 #spelinfo, #spelers {
     height:200px;
     float:left;
@@ -442,17 +503,18 @@ h5{
 }
 
 #spelers{
-    width:calc(45% - 3vw);
+    /* width:calc(45% - 3vw); */
 }
+
 #spelinfo{
-    width:calc(55% - 3vw);
+    /* width:calc(55% - 3vw); */
     background-color:rgba(0,0,0,0.7);
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 }
 
-#spelimg , #vs{
+#spelimg , #vs {
     position:relative;
     height:40%;
     width:100%;
@@ -462,15 +524,15 @@ h5{
     background-position: center bottom;
     overflow:hidden;
 }
-#vs{
+
+#vs {
     background-image: url('../afbeeldingen/vs.jpg');
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     background-position: center center;
-}
-.spelimg11 {
-    background-image: url('../afbeeldingen/schaken.jpg')
+    /* width: 100%;
+    min-height: 250px; */
 }
 
 #spelinfo p {
@@ -485,7 +547,8 @@ h5{
     line-height:2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h6{
+
+#spelimg h6{
     font-family: 'Lato', sans-serif;
     padding:0;
     margin:0;
@@ -497,10 +560,12 @@ h6{
     padding-bottom:1vmin;
     bottom:0;
 }
+
 .onlinespacer{
     height:3%;
     width:100%;
 }
+
 .speler{
     width: 98%;
     height: 36px;
@@ -509,13 +574,16 @@ h6{
     -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
 }
+
 .selected {
     background-color:rgba(0,0,0,0.1);
  
 }
+
 .selected p {
     color:darkblue;
 }
+
 .spelerstatus{
     width:16px;
     height:16px;
@@ -524,12 +592,15 @@ h6{
     padding:0px;
     float:left; 
 }
+
 .available{
     background-color:rgb(35, 201, 35);
 }
+
 .unavailable{
     background-color:rgb(221, 43, 43);
 }
+
 .speler p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float:left;
@@ -542,6 +613,7 @@ h6{
     margin-left:20px;
 
 }
+
 #online{
     height:58%;
     width:100%;
@@ -554,6 +626,7 @@ h6{
  background-color: rgba(0,0,0,0.7);
  float:right;
 }
+
 .invite p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float:left;
@@ -567,7 +640,11 @@ h6{
     text-align: center;
 }
 
+<<<<<<< HEAD
 index 
+=======
+/*index */ 
+>>>>>>> fafc30b4e37a8c62aaf6d80a76b6a4b47bf9ab83
 #index {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2NkYGBoYIAAMM2ITQCqAKECRQAAdW4DBf3zkJMAAAAASUVORK5CYII=) repeat, linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 35%, rgba(255,255,255,0) 100%);
     position:fixed;
@@ -577,7 +654,8 @@ index
     height:100vh;
     width:100%;
 }
-.myVideo {
+
+.myVideo, .login_bkgr {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -588,20 +666,22 @@ index
     transition:height 0.0s ease-out
 }
 
-.myVideo video {
-    /* Make video to at least 100% wide and tall 
+.myVideo video, .login_bkgr {
+    /* Make video to at least 100% wide and tall */
     min-width: 100vw; 
     min-height: 100vh; 
     
-    /* Setting width & height to auto prevents the browser from stretching or squishing the video 
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
     width: auto;
     height: auto;
-    /* Center the video 
+    /* Center the video */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
   }
+  
+/*
   h1{
     font-family: 'Lato', sans-serif;
     padding:0;
@@ -615,6 +695,7 @@ index
       width:100%;
       margin-top:35vh;
   }
+  */
   #slogan{
       width:100%;
       margin:0;
@@ -623,20 +704,29 @@ index
     font-family: 'Lato', sans-serif;
     padding:0;
     margin:0;
-    color:white;
-    font-size:4.5vmin;
-    margin-top:2vmin;
+    color:#ebe9dc;
+    /* font-size:4.5vmin; */
+    /* font-size: 36px; */
+    font-size: calc(2vmin + 20px);
+    margin-top:12vmin;
     width:100%;
     text-align: center;
   }
+  
   #landr{
-      margin: 6vmin auto 0 auto;
+      margin: 30vmin auto 0 auto;  /* margin-top: 36vmin */
+      /* margin-top: 400px; */
       height:calc(3vmin + 20px);
-      width:calc(20% + 180px);
-  }
+      /* width:calc(20% + 180px); */
+    width: 100%;
+    }
+  
   #login, #register {
-    width:calc(20% + 90px);
-    height:100%;
+    margin-top: 60px;
+    /* width:calc(20% + 90px); */
+    max-width:180px;
+    /* height:100%; */
+    height: 45px;
     border-radius:30px;
     border-style: solid;
     border-width: 5px;
@@ -644,30 +734,36 @@ index
     transition: background-color 0.5s ease-in-out;
   }
   #login p, #register p{
-    width:100%;
+    width:100%;;
     text-align: center;
-    color:white;
     font-weight:700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size:3vmin;
-    margin:0;
-    padding:5px;
+    /* font-size:3vmin; */
+    /* font-size: calc(40% + 10px); */
+    font-size: 24px;
+    margin:-3px 0 0 0;
+    padding: 0;
     cursor:pointer;
   }
   #login {
     float:left;
+    color: #108ea7;
+    background: #ebe9dc;
   }
   #login:hover{
-    background-color:#108ea7
+    color: #ebe9dc;
+    background-color:#108ea7;
   }
   #register:hover{
-      background-color:transparent;
+      color:#108ea7;
+      background-color:#ebe9dc;
   }
   #register{
     float:right;
-    background-color:#108ea7
+    color:#ebe9dc;
+    background-color:#108ea7;
   }
-
+/*
   .KenUit{
     width:100%;
     height:calc(9vh + 20px);
@@ -807,6 +903,7 @@ index
     font-size:8vmin;
     text-align:center;
 }
+*/
   #invite{
     position:absolute;
     display:none;
@@ -816,7 +913,8 @@ index
     height:36px;
     cursor:pointer;
     }
-#invite p {
+
+    #invite p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0;
     font-size:17px;
@@ -827,10 +925,12 @@ index
     width:100%;
     text-align: center;
 }
+
 #status{
     margin-left:auto;
     margin-right:auto;
 }
+
 .queuestatus {
     width:40px;
     height:40px;
@@ -844,48 +944,75 @@ index
 .declined {
     background-color:red;
 }
+
 #modalbg {
-position: absolute;
-z-index:100;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background-color:rgba(0,0,0,0.5);
-display:none;
+    position: absolute;
+    z-index:100;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.5);
+    display:none;
 }
+
 #modal {
-width:350px;
-height:230px;
-position: relative;
-margin-left:auto;
-margin-right:auto;
-margin-top:calc(50vh - 100px);
-background-color:white;
-box-sizing:border-box;
-padding:20px;
--webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    width:420px;
+    height:250px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:calc(50vh - 100px);
+    background-color:white;
+    box-sizing:border-box;
+    padding:20px;
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
 }
+
+#modalhead {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 #invitebuttons {
-display:none;
-margin-left:10px;
-margin-top:20px;
+    display:none;
+    margin-left:10px;
+    margin-top:20px;
 }
+
 #confirmbuttons {
-display:none;
-margin-left:10px;
-margin-top:20px;
+    display:none;
+    margin-left:10px;
+    margin-top:20px;
 }
+
 #closebuttons {
-display:none;
-margin-left:10px;
-margin-top:20px;
+    display:none;
+    margin-left:10px;
+    margin-top:20px;
 }
+
+#declbut, #accbut {
+    margin: 0 10px;
+    padding-bottom: 2px;
+    color: white;
+    background: #26e;
+    border-radius: 7px;
+}
+
+#beginspel, #annspel {
+    padding-bottom: 2px;
+    color: white;
+    background: #26e;
+    border-radius: 7px;    
+}
+
 #hiddenform{
-display:none;
+    display:none;
 }
+
 .unavailable {
     color:red;
     cursor:default;
@@ -893,7 +1020,7 @@ display:none;
 .pointer{
     cursor: pointer;
 }
-
+/*
 
  PROFIEL 
 

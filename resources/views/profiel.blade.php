@@ -30,7 +30,7 @@
         <div class="profielButton">
             <h1 style="margin-top:-2vmin;padding-top:0">&#8634;</h1>
         </div>
-              <div class="col-md-8">
+              <div class="col-md-8 mt-5">
 <!--                        <h4>U kunt uw gegevens aanvullen of wijzigen</h4> -->
                  
                         
@@ -196,8 +196,7 @@
                             </div>
                             </form>
                 </div>
-            <div class="col-md-4">
-
+            <div class="col-md-2 mt-5">
             <div id="profielFoto">{{ __('foto') }}
                 <input id="foto" type="file"
                     class="form-control{{ $errors->has('foto') ? ' is-invalid' : '' }}"
@@ -217,7 +216,7 @@
             
          <div class="vriendButton" onclick="document.location='/vriendtoevoegen'">
             <h1 style="margin-top:-2vmin;padding-top:0">+</h1>
-                  
+                  <div class="col-md-6 mt-5">
         
                    <select>
                         @foreach($user->vrienden as $vriend)
@@ -241,7 +240,7 @@
                          </div>   
                         
                     
-                        
+             </div>
                     </div>
         
                     

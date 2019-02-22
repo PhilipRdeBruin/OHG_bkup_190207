@@ -1,6 +1,6 @@
 <?php
 
-    public function vriendToevoegenMail($gebruiker_id, $vriend_id) {
+    function vriendToevoegenMail($gebruiker_id, $vriend_id) {
         $gebruiker = User::findOrFail($gebruiker_id);
         $vriend = User::findOrFail($vriend_id);
 

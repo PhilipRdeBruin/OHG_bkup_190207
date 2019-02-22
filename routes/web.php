@@ -12,56 +12,69 @@
 */
 Auth::routes();
 
+Route::get('/', function () {
+   return view('index');
+});
+
 Route::get('/index', function () {
    return view('index');
- });
-     
- Route::get('/vraag', function () {
+});
 
-    return view('includes/vraag');
- });
-Route::get('test', function () {
-    return view('test');
- });
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('spelkeuze', 'ActievespelController@actiefspeltoevoegen')->name('actiefspeltoevoegen');
+Route::get('/home', function () {
+   return view('index');
+});
 
-Route::get('spelaccepteren/{id}', 'ActievespelController@actiefspelaccepteren')->name('actiefspelaccepteren');
+// Geeft nog foutmelding... Gezamenlijk bekijken...
+Route::get('spelreserveren', function() {
+   return view('spelreserveren');
+});
+// ------------------------------------------------
+
+Route::get('/vraag', function () {
+   return view('includes/vraag');
+});
+
+// Route::get('test', function () {
+//    return view('test');
+// });
 
 
-
-Route::get('/vriendtoevoegen', 'User_RelationController@vrienden')->name('vriendkiezen');
-
-Route::get('vriendbevestigen/{gebruiker_id}/{vriend_id}', 'User_RelationController@vriendToevoegenMail')->name('vriendbevestigen');
-
+Route::group(['middleware' => ['auth']], function() {
+   Route::put('/profiel', 'ProfielController@update')->name('profiel.update');  
+});
 
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::group(['middleware' => ['auth']], function() {
-   Route::get('profiel', 'ProfielController@profiel')->name('profiel');
-   Route::put('/profiel', 'ProfielController@update')->name('profiel.update');
-});
+Route::get('profiel', 'ProfielController@profiel')->name('profiel');
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/vriendtoevoegen', 'User_RelationController@vrienden')->name('vriendkiezen');
 
 Route::get('keuze', 'KeuzeController@keuze')->name('keuze');
 
 Route::get('keuzevrienduitnodiging', 'KeuzeController@keuzevrienduitnodiging')->name('keuzevrienduitnodiging');
 
+Route::get('vriendbevestigen/{gebruiker_id}/{vriend_id}', 'User_RelationController@vriendToevoegenMail')->name('vriendbevestigen');
 
 Route::get('spelkeuze', 'SpelController@spelkeuze')->name('spelkeuze');
 
+Route::get('spel', 'SpelController@spel')->name('spel');
+
 Route::get('spel/{id}', 'SpelController@spel')->name('spel');
+
+Route::get('spelaccepteren', 'ActievespelController@actiefspelaccepteren')->name('actiefspelaccepteren');
+
+Route::get('spelaccepteren/{id}', 'ActievespelController@actiefspelaccepteren')->name('actiefspelaccepteren');
+
+
+
+Route::post('spelkeuze', 'ActievespelController@actiefspeltoevoegen')->name('actiefspeltoevoegen');
+
 Route::post('spel/{id}/{uitgenodigde}', 'SpelController@spelSpelen')->name('spelSpelen');
 
 Route::post('profiel/{id}', 'SpelController@spel');
-
-Route::get('spelreserveren', function() {
-   return view('spelreserveren');
-});
 
 Route::post('chat/{vriend}', 'KeuzeController@naarChat')->name('naarChat');
 

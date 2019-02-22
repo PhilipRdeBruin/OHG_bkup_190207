@@ -4,11 +4,11 @@
 @extends('layouts.standaard')
 
 @section('content')
-<div class = "row">
+<!-- <div class = "row"> -->
 
 <!--    <img src="/afbeeldingen/compilatie1.png" id = "compilatie">   -->
 
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center mt-5">
     <div class="col-md-1"> </div>
     <div class="col-md-9">
@@ -46,6 +46,29 @@
     </div>
 </div>
      </div>
-    </div>
+    </div> -->
+
+
+    <body>
+        @guest
+        @else
+            <script>
+            location.href='/keuze';
+            </script>
+        @endguest
+        <div class="myVideo">
+            <video src="{{asset('mp4/chess.mp4')}}" type="video/mp4" autoplay muted loop></video>
+        </div>
+        
+        <div id="index">              
+            <div id="slogan"><p><i>&#8220;De nieuwe spellen sensatie op het internet&#8221;</i></p></div>
+            <div class="row justify-content-center" id="landr">
+                <div class="col-md-2 col-md-offset-3" id="login" onclick="location.href = '/login'"><p>Aanmelden</p></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2" id="register" onclick="location.href = '/register'"><p>Registreren</p></div>
+            </div>
+        </div>
+    </body>
+
 
 @endsection
