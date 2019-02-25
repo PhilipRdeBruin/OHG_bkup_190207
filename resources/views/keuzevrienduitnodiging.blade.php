@@ -146,12 +146,13 @@
                     Hieronder ziet uw uw vrienden die op dit moment online zijn.
                 </h5>    
 
-                <div class="row justify-content-center">                    
-                    <?php $nvr = 0; ?>              
+                <div class="row"> <!-- justify-content-center -->                    
+                    <?php $i = 1; $nvr = 0; ?>              
                     @foreach($user->vrienden->sortBy('achternaam') as $vriend)
                         @if($vriend->isOnline())
-                            <div class="col-md-5 card-vriend">
-                                <?php 
+                            <div class="col-md-5 card-vriend card-vriend{{ $i }}">
+                                <?php
+                                    $i = ($i == 1) ? 2 : 1; 
                                     $nvr++;
                                     $vn = $vriend->voornaam;
                                     $tv = ($vriend->tussenv != NULL) ? " " . $vriend->tussenv : "" ;

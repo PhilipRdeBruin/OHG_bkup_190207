@@ -449,6 +449,11 @@
     border-radius   : 5px; 
 }
 
+#profiel-foto {
+    margin: auto;
+    width: 50%;
+}
+
 .titeldiv {
     margin: 2.5% 6.75% 0 6.75%;
     padding: 1.5% 0;
@@ -505,9 +510,16 @@
 }
 
 .card-vriend {
+    margin-left: 5.5%;
+    min-width: 40%;
+    max-width: 90%;
     padding: 0 10px 20px 10px;
     text-align: center;
 }
+
+/* .card-vriend1 {
+    margin-left: 5%;
+} */
 
 .btn-mpl {
     font-size:calc(2.6vh - 4px);
@@ -517,4 +529,45 @@
     margin-top:4vmin;
     margin-left: 25%;
     width: 50%;
+}
+
+#vriend-profiel {
+    display: inline;
+    padding-top: 2.5%;
+}
+
+#vriend-gegevens0 {
+    margin-left : 1.5%;
+}
+
+/* #vriend-gegevens {
+    width: 100%;
+} */
+
+#label_vr-gebrnm {
+    padding-left:5%;
+}
+
+#vriend-gebrnm0 {
+    width:100%;
+}
+
+#vriend-gebrnm {
+    margin-left: 15px;
+    padding: 3px 10px;
+    color:#46f; 
+    font-weight:bold; 
+    /* background:#eee;
+    border: 1px solid #ccc;
+    border-radius: 5px; */
+}
+
+.td-vriend {
+    padding-left: 0;
+    /* background: red; */
+}
+
+.lbl_td-vriend {
+    width: 50%;
+    /* background: blue; */
 }

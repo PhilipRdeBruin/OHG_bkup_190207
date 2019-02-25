@@ -23,7 +23,6 @@
 
 <link rel = "stylesheet" href = "{{ asset('css/ohg.css') }}"/>
 <link rel="stylesheet"  href="{{ asset('css/KVU.css') }}" />
-<link rel="stylesheet" href="{{ asset('css/style.css')}}"/>
 
 <?php
     $server = "192.168.2.6";        // PC: De Knolle

@@ -1,19 +1,24 @@
+
 @extends('layouts.standaard')
 @section('content')
 
-<div class="main">
-    
+<div class="container">
     <div class="row justify-content-center mt-4">
 <div class="container col-md-8" style="text-align:center">
-      <h1><span class="kl_blauw">Kennis toevoegen</span></h1><br>
+      <h1><span class="kl_blauw">U wilt een vriend toevoegen</span></h1><br>
         </div>
     </div>
-      
-      <div class="kennisBlok">
-          <div class="profielHeader">
-         <h2 style="margin-top:2vmin">Kennis toevoegen</h2>
-          </div>
-             <p>Hier onder kunt een speler selecteren om deze toe te voegen als vriend. Als de speler uw uitnodiging accepteert dan kunt u eenvoudig een afspraak met hem of haar maken. </p>
+      <div class="row justify-content-center">
+          <div class="container col-md-8" style="text-align:center">
+    <h4>Hier onder kunt een speler selecteren om deze toe te voegen als vriend. Als de speler uw uitnodiging accepteert dan kunt u eenvoudig een afspraak met hem of haar maken. </h4>
+    </div>
+          
+    </div>
+       <div class="row justify-content-center">
+          <div class="container col-md-4">
+        <div class="card mt-5">
+         <div class="card-header" style="text-align:center"><b>Vriend toevoegen</b></div>
+         <div class="card-body">
              <p style="text-align:center"><b>Selecteer een vriend</b></p>
              <div class="row justify-content-center">
              <form method="POST" action="{{ route('vriendtoevoegen') }}"> 
@@ -43,13 +48,13 @@
              </div>
             </div>
               </div>
+           </div>
                  
         
-        <div class="kennisBlok">
-             <div class="profielHeader">
-         <h2 style="margin-top:2vmin">Nieuwe speler uitnodigen</h2>
-            </div>
-             <p>Staat u kennis nog niet geregistreerd in ons systeem. Nodig hem/haar dan uit in Nieuwe speler!</p> 
+          <div class="container col-md-4">
+        <div class="card mt-5">
+         <div class="card-header" style="text-align:center"><b>Nieuwe speler uitnodigen</b></div>
+         <div class="card-body">
              <div class="row justify-content-center"> 
              <form method="POST" action="{{ route('nieuwspelertoevoegen')}}"> 
                  @csrf
@@ -73,11 +78,11 @@
               </div>
               
          
-
+</div>
 
 </div>
     
-
+</div>
 
                 
 
