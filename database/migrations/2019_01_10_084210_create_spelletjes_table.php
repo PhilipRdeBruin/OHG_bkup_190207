@@ -16,8 +16,10 @@ class CreateSpelletjesTable extends Migration
         Schema::create('spelletjes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('spel_naam');
+            $table->string('alias');               
             $table->string('link', 191);
             $table->unsignedInteger('aantalspelers');
+            $table->string('rollen')->nullable();
             $table->timestamps();
         });
     }

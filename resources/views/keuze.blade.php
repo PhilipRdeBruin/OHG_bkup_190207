@@ -53,13 +53,14 @@
                     ?>
                     <div class="notification">
                         <p style="width:80%;line-height:2">{{ $actiefspel->spelletje->spel_naam }} <br> {{ $datum }}</p>
-                        <div onclick="document.getElementById('actspel').submit()" class="spelen">
+                        <div onclick="document.getElementById('actspel{{ $cnt }}').submit()" class="spelen">
                             <p>Speel</p>
                         </div>
-                        <form id="actspel" method="POST" action="http://{{ $server }}/{{ $actiefspel->spelletje->link }}">
+                        <form id="actspel{{ $cnt }}" method="POST" action="http://{{ $server }}/{{ $actiefspel->spelletje->link }}" target="_blank">
                             <input type="hidden" name="act_spel" value="{{ $actiefspel->id }}">
                             <input type="hidden" name="speler" value="{{ $gebruiker->id }}">
                             <input type="hidden" name="rol" value="{{ $actiefspel->pivot->rol }}">
+                            <input type="hidden" name="gamestate" value="{{ $actiefspel->gamestate }}">
                         </form>
                     </div>
                 @endforeach

@@ -283,7 +283,9 @@
 }
 
 .li_navbar {
-    margin          : 0 10px;
+    /* margin          : 0 10px; */
+    padding         : 0 10px;
+    background      : #108ea7;
 }
 
 #overzichtstabel {
@@ -446,7 +448,8 @@
     color           : white;
     background      : #007bff;
     border          : 1px solid #007bff;
-    border-radius   : 5px; 
+    border-radius   : 5px;
+    cursor          : pointer;
 }
 
 #profiel-foto {

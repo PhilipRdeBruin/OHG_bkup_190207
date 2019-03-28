@@ -23,7 +23,7 @@
                         </li>
                     @endguest
                     
-                    <li class=" nvabar-item li_navbar">
+                    <li class="nvabar-item li_navbar">
                         <a href="/contact" class="nav-link {{ $act_lnk['login'] }}" style="color:white">Contact</a>
                     </li>
 

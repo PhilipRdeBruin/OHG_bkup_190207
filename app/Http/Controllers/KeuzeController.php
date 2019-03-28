@@ -21,7 +21,8 @@ class KeuzeController extends Controller
         $gebruiker = Auth::user();
         if ($gebruiker != null) {
             $straks = date("Y-m-d H:i:s", strtotime("-1 hours"));
-            $actieve_spellen = $gebruiker->actieveSpelletjes()->where('gamestate', '!=', '99')->where('aanvangstijdstip', '>', $straks)->get();
+            // $actieve_spellen = $gebruiker->actieveSpelletjes()->where('gamestate', '!=', '99')->where('aanvangstijdstip', '>', $straks)->get();
+            $actieve_spellen = $gebruiker->actieveSpelletjes()->whereNull('winnaar')->where('aanvangstijdstip', '>', $straks)->get();
             return view('keuze', ['vrtekst' => $vrtekst, 'actievespellen' => $actieve_spellen, 'gebruiker' => $gebruiker]);
         } else {
             return \Redirect::to('index');
